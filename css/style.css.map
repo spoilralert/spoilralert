@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,0GAAI;AEAZ,AAAA,IAAI,CAAC;EACD,gBAAgB,EDDR,OAAO;CCElB",
+    "sources": [
+        "../styles/style.scss",
+        "../styles/partials/_colors.scss",
+        "../styles/partials/_base.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
