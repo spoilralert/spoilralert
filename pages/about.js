@@ -9,8 +9,10 @@ export default function About() {
     <Layout>
       <Head title="About" />
       <Header />
-      <Heading title="About" />
-      <Paragraph text="About us" />
+      <section>
+        <Heading title="About" />
+        <Paragraph text="About us" />
+      </section>
     </Layout>
   );
 }

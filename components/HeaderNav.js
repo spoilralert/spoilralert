@@ -2,9 +2,13 @@ import Link from "next/link";
 
 export default function HeaderNav() {
   return (
-    <div>
-      <Link href="/signin">Sign in</Link>
-      <Link href="/login">Login</Link>
+    <div className="sign-log">
+      <div>
+        <Link href="/signin">Sign in</Link>
+      </div>
+      <div>
+        <Link href="/login">Login</Link>
+      </div>
     </div>
   );
 }

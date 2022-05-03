@@ -1,7 +1,33 @@
 * {
     font-family: 'Poppins', sans-serif;
+    color: $white;
+    font-size: 30px;
 }
 
-h1 {
+h1, h2, a, button, .bg-text {
     font-family: 'Teko', sans-serif;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+h4 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 14px;
+}
+
+a {
+    font-size: 18px;
+}
+
+div {
+    label {
+        font-size: 12px;
+    }
 }

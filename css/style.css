@@ -1,5 +1,206 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Teko:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-color: #141414;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  color: #F1F1F1;
+  font-size: 30px;
+}
+
+h1, h2, a, button, .bg-text {
+  font-family: 'Teko', sans-serif;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+}
+
+a {
+  font-size: 18px;
+}
+
+div label {
+  font-size: 12px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header div {
+  width: 100%;
+}
+
+.bg-text {
+  -webkit-text-stroke: 1px rgba(87, 87, 87, 0.2);
+  color: transparent;
+  font-size: 12rem;
+  line-height: 0.6;
+  z-index: -10;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-wrapper {
+  height: 80%;
+  margin-top: -6rem;
+  padding: 10px;
+}
+
+.logo-wrapper .searchbox {
+  margin-top: 2rem;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.sign-log {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.sign-log div {
+  width: 3rem;
+  margin-right: 10px;
+  background-color: #FBA92C;
+  border-radius: 0px 0px 50% 50%;
+  text-align: center;
+  box-shadow: 0 5px 10px #141414, 0 0 0 5px #565656;
+}
+
+.searchbox {
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchbox a {
+  align-self: flex-end;
+}
+
+.searchbox label {
+  padding-bottom: 5px;
+}
+
+.searchbox input {
+  color: #141414;
+  font-size: 12px;
+  width: 15rem;
+}
+
+.searchbox div {
+  display: flex;
+  box-shadow: 0 5px 10px #141414, 0 0 0 5px #565656;
+  border-radius: 2px;
+}
+
+.searchbox div button {
+  box-shadow: 0 5px 10px #141414, 0 0 0 5px #565656;
+  border: none;
+  padding: 5px 10px;
+}
+
+.intro {
+  height: 500px;
+  margin-left: 50%;
+  width: 50%;
+  border-left: solid 1px #FBA92C;
+  border-bottom: solid 1px #FBA92C;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.intro button {
+  align-self: center;
+}
+
+button {
+  background-color: #FBA92C;
+  border: none;
+  border-radius: 2px;
+  font-size: 18px;
+  padding: 10px 100px;
+}
+
+.description-container {
+  background-color: #FBA92C;
+}
+
+.description-container h2 {
+  color: #141414;
+  padding-bottom: 0.5rem;
+}
+
+.description {
+  width: 15rem;
+  height: 8rem;
+}
+
+.description h2, .description h4 {
+  color: #141414;
+}
+
+.description p {
+  color: #141414;
+  padding: 0.5rem;
+  border-left: solid 1px #141414;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+footer {
+  padding: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

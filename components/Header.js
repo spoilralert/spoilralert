@@ -7,9 +7,15 @@ import Search from "./search";
 export default function Header() {
   return (
     <header>
-      <Image src={Logo} width="50" height="50" alt="spoilralet logo" />
-      <Search />
-      <HeaderNav />
+      <div className="header-logo">
+        <Image src={Logo} width="70" height="70" alt="spoilralet logo" />
+      </div>
+      <div>
+        <Search />
+      </div>
+      <div>
+        <HeaderNav />
+      </div>
     </header>
   );
 }

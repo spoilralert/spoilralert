@@ -2,7 +2,7 @@ import Footer from "./Footer";
 export default function Layout({ children }) {
   return (
     <>
-      <div>{children}</div>
+      <div className="container">{children}</div>
       <Footer />
     </>
   );
