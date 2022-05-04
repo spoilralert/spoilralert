@@ -11,6 +11,9 @@ header {
     div {
         width: 100%;
     }
+    .header-logo{
+        padding: $padding;
+    }
 }
 
 .bg-text {
@@ -34,7 +37,7 @@ header {
 
 a {
     text-decoration: none;
-    padding: 10px;
+    padding: $padding;
 }
 
 .sign-log {
@@ -43,12 +46,14 @@ a {
     flex-direction: row;
     justify-content: flex-end;
     div {
-        width: 3rem;
+        // width: 3rem;
         margin-right: 10px;
-        background-color: $secondary;
+        // background-color: $secondary;
+        background-color: transparent;
         border-radius: 0px 0px 50% 50%;
         text-align: center;
-        box-shadow: 0 5px 10px $primary, 0 0 0 5px $darkgrey;
+        // box-shadow: 0 5px 10px $primary, 0 0 0 5px $darkgrey;
+        // box-shadow: 0 3px 6px $primary, 0 0 0 3px $darkgrey;
     }
 }
 
@@ -60,26 +65,41 @@ a {
 
     a {
         align-self: flex-end;
+        padding: 0.1rem;
     }
     
     label {
         padding-bottom: 5px;
     }
-    input {
-        color: $primary;
-        font-size: 12px;
-        width: 15rem;
-    }
+    // input {
+    //     color: $primary;
+    //     font-size: 12px;
+    //     width: 15rem;
+    //     padding-left: $padding;
+    // }
 
     div {
+        background-color: $white;
         display: flex;
-        box-shadow: 0 5px 10px $primary, 0 0 0 5px $darkgrey;
-        border-radius: 2px;
+        padding: 0.2rem;
+        // box-shadow: $box-shadow;
+        border-radius: $border-radius;
+
+        input {
+            border: none;
+            background-color: $white;
+            color: $primary;
+            font-size: 12px;
+            width: 15rem;
+            padding-left: $padding;
+        }
 
         button {
-        box-shadow: 0 5px 10px $primary, 0 0 0 5px $darkgrey;
-        border: none;
-        padding: 5px 10px;
+            color: $primary;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 5px 10px;
         }
     }
     
@@ -97,6 +117,7 @@ a {
     flex-direction: column;
     justify-content: flex-end;
     button {
+        margin-top: 10px;
         align-self: center;
     }
 }
@@ -104,16 +125,20 @@ a {
 button {
     background-color: $secondary;
     border: none;
-    border-radius: 2px;
-    font-size: 18px;
+    border-radius: $border-radius;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
     padding: 10px 100px;
+    // box-shadow: 0 3px 6px $primary, 0 0 0 3px $darkgrey;
 }
 
 .description-container {
     background-color: $secondary;
     h2 {
         color: $primary;
-        padding-bottom: 0.5rem;
+        padding-bottom: $padding;
     }
 }
 
@@ -125,7 +150,7 @@ button {
     }
     p {
         color: $primary;
-        padding: 0.5rem;
+        padding: $padding;
         border-left: solid 1px $primary;
     }
 }

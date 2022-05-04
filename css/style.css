@@ -33,7 +33,7 @@ section {
   font-size: 30px;
 }
 
-h1, h2, a, button, .bg-text {
+h1, h2, .bg-text {
   font-family: 'Teko', sans-serif;
 }
 
@@ -55,7 +55,10 @@ p {
 }
 
 a {
-  font-size: 18px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FBA92C;
 }
 
 div label {
@@ -69,6 +72,10 @@ header {
 
 header div {
   width: 100%;
+}
+
+header .header-logo {
+  padding: 0.5rem;
 }
 
 .bg-text {
@@ -93,7 +100,7 @@ header div {
 
 a {
   text-decoration: none;
-  padding: 10px;
+  padding: 0.5rem;
 }
 
 .sign-log {
@@ -104,12 +111,10 @@ a {
 }
 
 .sign-log div {
-  width: 3rem;
   margin-right: 10px;
-  background-color: #FBA92C;
+  background-color: transparent;
   border-radius: 0px 0px 50% 50%;
   text-align: center;
-  box-shadow: 0 5px 10px #141414, 0 0 0 5px #565656;
 }
 
 .searchbox {
@@ -121,27 +126,34 @@ a {
 
 .searchbox a {
   align-self: flex-end;
+  padding: 0.1rem;
 }
 
 .searchbox label {
   padding-bottom: 5px;
 }
 
-.searchbox input {
-  color: #141414;
-  font-size: 12px;
-  width: 15rem;
-}
-
 .searchbox div {
+  background-color: #F1F1F1;
   display: flex;
-  box-shadow: 0 5px 10px #141414, 0 0 0 5px #565656;
+  padding: 0.2rem;
   border-radius: 2px;
 }
 
-.searchbox div button {
-  box-shadow: 0 5px 10px #141414, 0 0 0 5px #565656;
+.searchbox div input {
   border: none;
+  background-color: #F1F1F1;
+  color: #141414;
+  font-size: 12px;
+  width: 15rem;
+  padding-left: 0.5rem;
+}
+
+.searchbox div button {
+  color: #141414;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
   padding: 5px 10px;
 }
 
@@ -159,6 +171,7 @@ a {
 }
 
 .intro button {
+  margin-top: 10px;
   align-self: center;
 }
 
@@ -166,7 +179,10 @@ button {
   background-color: #FBA92C;
   border: none;
   border-radius: 2px;
-  font-size: 18px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
   padding: 10px 100px;
 }
 

@@ -4,7 +4,7 @@
     font-size: 30px;
 }
 
-h1, h2, a, button, .bg-text {
+h1, h2, .bg-text {
     font-family: 'Teko', sans-serif;
 }
 h2 {
@@ -23,7 +23,10 @@ p {
 }
 
 a {
-    font-size: 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $secondary;
 }
 
 div {

@@ -1,3 +1,5 @@
+// colors
+
 $primary:#141414;
 $secondary: #FBA92C;
 $secondary_50opacity: hsla(36, 96%, 58%, 0.5);
@@ -5,3 +7,7 @@ $white: #F1F1F1;
 $darkgrey: #565656;
 $darkgrey_20opacity: hsla(0, 0%, 34%, 0.2);
 $lightgrey: #9E9E9E;
+
+$border-radius: 2px;
+$box-shadow: 0 5px 10px $primary, 0 0 0 5px $darkgrey;
+$padding: 0.5rem;

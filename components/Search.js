@@ -5,6 +5,9 @@ export default function Search() {
     <div className="searchbox">
       <label htmlFor="search">search for spoilrs</label>
       <div>
+        <button type="submit" className="searchbtn">
+          search
+        </button>
         <input name="search" type="text" placeholder="film title" />
         <button type="submit" className="searchbtn">
           search

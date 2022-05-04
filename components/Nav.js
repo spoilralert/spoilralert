@@ -6,7 +6,7 @@ export default function Nav() {
       <Link href="/about">About</Link>
       <Link href="/contact">Contact</Link>
       <Link href="/faq">FAQ</Link>
-      <Link href="/requested">Requested spoilrs</Link>
+      <Link href="/requests">Requested spoilrs</Link>
       <Link href="/signup">Sign up</Link>
       <Link href="/login">Login</Link>
       <Link href="/profile">Profile</Link>

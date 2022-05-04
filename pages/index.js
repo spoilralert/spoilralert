@@ -44,7 +44,7 @@ export default function Home() {
           {/* <div>
             <button>View requested spoilrs</button>
           </div> */}
-          <button>View requested spoilrs</button>
+          <button>view requested spoilrs</button>
         </div>
       </section>
       <section className="description-container">
