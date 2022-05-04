@@ -29,8 +29,11 @@ section {
 
 * {
   font-family: 'Poppins', sans-serif;
-  color: #F1F1F1;
   font-size: 30px;
+}
+
+h1, h2, h3, h4, p {
+  color: #F1F1F1;
 }
 
 h1, h2, .bg-text {
@@ -63,6 +66,10 @@ a {
 
 div label {
   font-size: 12px;
+}
+
+.icon {
+  color: #141414;
 }
 
 header {

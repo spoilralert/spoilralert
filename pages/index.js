@@ -7,6 +7,9 @@ import Logo from "../public/images/logo_rooster_white1.png";
 import Paragraph from "../components/paragraph";
 import Search from "../components/search";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 // import Head from 'next/head'
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'

@@ -5,6 +5,10 @@
 @import "partials/typography";
 
 
+.icon {
+    color: $primary;
+}
+
 header {
     display: flex;
     justify-content: space-between;

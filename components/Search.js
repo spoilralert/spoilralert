@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function Search() {
   return (
@@ -6,11 +8,11 @@ export default function Search() {
       <label htmlFor="search">search for spoilrs</label>
       <div>
         <button type="submit" className="searchbtn">
-          search
+          <FontAwesomeIcon icon={faPlus} style={{ fontSize: 25 }} />
         </button>
         <input name="search" type="text" placeholder="film title" />
         <button type="submit" className="searchbtn">
-          search
+          <FontAwesomeIcon icon={faSearch} style={{ fontSize: 25 }} />
         </button>
       </div>
       <Link href="/advancedSearch">Advanced search</Link>
