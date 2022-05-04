@@ -68,10 +68,6 @@ div label {
   font-size: 12px;
 }
 
-.icon {
-  color: #141414;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -202,8 +198,12 @@ button {
   padding-bottom: 0.5rem;
 }
 
+.description-wrapper {
+  display: flex;
+}
+
 .description {
-  width: 15rem;
+  max-width: 15rem;
   height: 8rem;
 }
 
@@ -215,6 +215,12 @@ button {
   color: #141414;
   padding: 0.5rem;
   border-left: solid 1px #141414;
+}
+
+.icon {
+  color: #141414;
+  align-self: center;
+  padding: 0.5rem;
 }
 
 nav {

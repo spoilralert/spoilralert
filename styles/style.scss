@@ -5,10 +5,6 @@
 @import "partials/typography";
 
 
-.icon {
-    color: $primary;
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -56,8 +52,6 @@ a {
         background-color: transparent;
         border-radius: 0px 0px 50% 50%;
         text-align: center;
-        // box-shadow: 0 5px 10px $primary, 0 0 0 5px $darkgrey;
-        // box-shadow: 0 3px 6px $primary, 0 0 0 3px $darkgrey;
     }
 }
 
@@ -75,12 +69,6 @@ a {
     label {
         padding-bottom: 5px;
     }
-    // input {
-    //     color: $primary;
-    //     font-size: 12px;
-    //     width: 15rem;
-    //     padding-left: $padding;
-    // }
 
     div {
         background-color: $white;
@@ -135,8 +123,9 @@ button {
     text-transform: uppercase;
     text-align: center;
     padding: 10px 100px;
-    // box-shadow: 0 3px 6px $primary, 0 0 0 3px $darkgrey;
 }
+
+
 
 .description-container {
     background-color: $secondary;
@@ -146,8 +135,12 @@ button {
     }
 }
 
+.description-wrapper {
+    display: flex;
+}
+
 .description {
-    width: 15rem;
+    max-width: 15rem;
     height: 8rem;
     h2, h4 {
         color: $primary;
@@ -158,6 +151,18 @@ button {
         border-left: solid 1px $primary;
     }
 }
+
+
+
+.icon {
+    color: $primary;
+    align-self: center;
+    padding: $padding;
+}
+
+
+
+
 
 nav {
     display: flex;
