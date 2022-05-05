@@ -3,60 +3,27 @@
 @import "partials/colors";
 @import "partials/base";
 @import "partials/typography";
+@import "partials/header";
+@import "partials/main";
 
 
-header {
-    display: flex;
-    justify-content: space-between;
-    div {
-        width: 100%;
-    }
-    .header-logo{
-        padding: $padding;
-    }
-}
 
-.bg-text {
-    -webkit-text-stroke: 1px $darkgrey_20opacity;
-    color: transparent;
-    font-size: 12rem;
-    line-height: 0.6;
-    z-index: -10;
-    display: flex;
-    justify-content: center;
-}
 
-.logo-wrapper {
-    height: 80%;
-    margin-top: -6rem;
-    padding: 10px;
-    .searchbox {
-        margin-top: 2rem;
-    }
-}
+
+
+
+
 
 a {
     text-decoration: none;
     padding: $padding;
 }
 
-.sign-log {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    div {
-        // width: 3rem;
-        margin-right: 10px;
-        // background-color: $secondary;
-        background-color: transparent;
-        border-radius: 0px 0px 50% 50%;
-        text-align: center;
-    }
-}
-
 .searchbox {
-    max-width: fit-content;
+    // background-color: red;
+    // max-width: fit-content;
+    // width: 100%;
+    width: min(30ch, calc(100vw - 2rem));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,13 +31,17 @@ a {
     a {
         align-self: flex-end;
         padding: 0.1rem;
+        font-size: clamp(0.3rem, 2vw, 0.4rem);
     }
     
     label {
         padding-bottom: 5px;
+        color: $white;
     }
 
     div {
+        // width: clamp(80%, 50vw, 100%);
+        width: 100%;
         background-color: $white;
         display: flex;
         padding: 0.2rem;
@@ -82,7 +53,9 @@ a {
             background-color: $white;
             color: $primary;
             font-size: 12px;
-            width: 15rem;
+            // width: 15rem;
+            // width: clamp(10rem, 40vw, 15rem);
+            width: 100%;
             padding-left: $padding;
         }
 
@@ -93,75 +66,35 @@ a {
             box-shadow: none;
             padding: 5px 10px;
         }
+        .search-icon {
+            font-size: clamp(0.5rem, 2vw, 0.8rem);
+        }
     }
     
 }
 
-.intro {
-    height: 500px;
-    margin-left: 50%;
-    width: 50%;
-    border-left: solid 1px $secondary;
-    border-bottom: solid 1px $secondary;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    button {
-        margin-top: 10px;
-        align-self: center;
-    }
-}
+
 
 button {
     background-color: $secondary;
     border: none;
     border-radius: $border-radius;
     font-size: 16px;
+    font-size: clamp(0.4rem, 2vw, 0.6rem);
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
     padding: 10px 100px;
+    padding: clamp(0.1rem, 2vw, 0.6rem);
 }
-
-
-
-.description-container {
-    background-color: $secondary;
-    h2 {
-        color: $primary;
-        padding-bottom: $padding;
-    }
-}
-
-.description-wrapper {
-    display: flex;
-}
-
-.description {
-    max-width: 15rem;
-    height: 8rem;
-    h2, h4 {
-        color: $primary;
-    }
-    p {
-        color: $primary;
-        padding: $padding;
-        border-left: solid 1px $primary;
-    }
-}
-
 
 
 .icon {
     color: $primary;
     align-self: center;
     padding: $padding;
+    font-size: clamp(0.8rem, 4vw, 1rem);
 }
-
-
-
 
 
 nav {

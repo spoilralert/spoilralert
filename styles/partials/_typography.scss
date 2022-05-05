@@ -11,26 +11,47 @@ h1, h2, h3, h4, p {
 h1, h2, .bg-text {
     font-family: 'Teko', sans-serif;
 }
+
+h1 {
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
+}
 h2 {
     font-size: 30px;
+    // font-size: clamp(0.4rem, 2vw, 0.5rem);
+    font-size: clamp(0.8rem, 3vw, 1rem);
 }
 h3 {
     font-size: 18px;
+    font-size: clamp(0.4rem, 2vw, 0.5rem);
     font-weight: 400;
 }
 h4 {
     font-size: 16px;
+    font-size: clamp(0.5rem, 2vw, 0.6rem);
 }
 
 p {
     font-size: 14px;
+    font-size: clamp(0.4rem, 2vw, 0.5rem);
 }
 
 a {
-    font-size: 14px;
+    // font-size: 14px;
+    font-size: clamp(0.4rem, 2vw, 0.5rem);
     text-transform: uppercase;
     letter-spacing: 2px;
     color: $secondary;
+}
+
+.bg-text {
+    -webkit-text-stroke: 1px $darkgrey_20opacity;
+    color: transparent;
+    font-size: 12rem;
+    font-size: clamp(4rem, 30vw, 12rem);
+    line-height: 0.6;
+    z-index: -10;
+    display: flex;
+    justify-content: center;
 }
 
 div {

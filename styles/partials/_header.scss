@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    div {
+        width: 100%;
+    }
+    .header-logo{
+        padding: $padding;
+    }
+}
+
+.header__sign-log {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    // div {
+    //     width: 3rem;
+    //     margin-right: 10px;
+    //     background-color: $secondary;
+    //     background-color: transparent;
+    //     border-radius: 0px 0px 50% 50%;
+    //     text-align: center;
+    // }
+}
