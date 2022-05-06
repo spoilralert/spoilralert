@@ -1,106 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Teko:wght@400;700&display=swap');
 
-@import "partials/colors";
+@import "partials/variables";
 @import "partials/base";
 @import "partials/typography";
+@import "partials/buttons";
+@import "partials/tabs";
 @import "partials/header";
+@import "partials/nav";
+@import "partials/hamburgerMenu";
+@import "partials/search";
 @import "partials/main";
+@import "partials/footer";
 
 
-.tabs {
-    display: flex;
-    flex-wrap: wrap;
-    height: 300px;
-    // width: 500px;
 
-  }
    
-  .tabs label {
-    order: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    width: 50%;
-    // margin-right: 0.2rem;
-    cursor: pointer;
-    background-color: transparent;
-    border-bottom: 1px solid $secondary;
-    color: $secondary;
-    // font-weight: bold;
-    // transition: background-color ease 0.3s;
-    transition: border ease-in-out 0.5s;
-  }
-   
-  .tabs .tab {
-    order: 9;
-    flex-grow: 1;
-    width: 100%;
-    height: 100%;
-    display: none;
-    padding: 1rem;
-    // background: #fff;
-    // border-top: 1px solid $secondary;
-    background-color: transparent;
-    padding: 20px;
-    // box-shadow: -10px 10px 0px 0px black;
-  }
-   
-  .tabs input[type="radio"] {
-    display: none;
-  }
-   
-  .tabs input[type="radio"]:checked + label {
-    // background: #fff;
-    border-top: 1px solid $secondary;
-    border-left: 1px solid $secondary;
-    border-right: 1px solid $secondary;
-    border-bottom: none;
-  }
-   
-  .tabs input[type="radio"]:checked + label + .tab {
-    display: block;
-  }
-   
-//   @media (max-width: 465px) {
-//     .tabs .tab,
-//     .tabs label {
-//      order: initial;
-//     }
-   
-//     .tabs label {
-//       width: 100%;
-//       margin-left: 50px;
-//     }
-//   }
-
-
-.movie {
-    // background-color: red;
-    margin-top: clamp(-4rem, -3vw, -2rem);
-    display: flex;
-    justify-content: space-evenly;
-
-    p {
-        padding: $padding;
-        border-left: solid 1px $secondary;
-    }
-}
-
-.container__movie__details {
-    // background-color: orange;
-    padding: $padding;
-    width: min(30ch, calc(100vw - 2rem));
-}
-.container__movie__details__info {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-
-
-
-
 
 
 
@@ -109,76 +23,6 @@ a {
     padding: $padding;
 }
 
-.searchbox {
-    // background-color: red;
-    // max-width: fit-content;
-    // width: 100%;
-    width: min(30ch, calc(100vw - 2rem));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    a {
-        align-self: flex-end;
-        padding: 0.1rem;
-        font-size: clamp(0.3rem, 2vw, 0.4rem);
-    }
-    
-    label {
-        padding-bottom: 5px;
-        color: $white;
-    }
-
-    div {
-        // width: clamp(80%, 50vw, 100%);
-        width: 100%;
-        background-color: $white;
-        display: flex;
-        padding: 0.2rem;
-        // box-shadow: $box-shadow;
-        border-radius: $border-radius;
-
-        input {
-            border: none;
-            background-color: $white;
-            color: $primary;
-            font-size: 12px;
-            // width: 15rem;
-            // width: clamp(10rem, 40vw, 15rem);
-            width: 100%;
-            padding-left: $padding;
-        }
-
-        button {
-            color: $primary;
-            background-color: transparent;
-            border: none;
-            box-shadow: none;
-            padding: 5px 10px;
-        }
-        .search-icon {
-            font-size: clamp(0.5rem, 2vw, 0.8rem);
-        }
-    }
-    
-}
-
-
-
-button {
-    background-color: $secondary;
-    border: none;
-    border-radius: $border-radius;
-    font-size: 16px;
-    font-size: clamp(0.4rem, 2vw, 0.6rem);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 10px 100px;
-    padding: clamp(0.1rem, 2vw, 0.6rem);
-}
-
-
 .icon {
     color: $primary;
     align-self: center;
@@ -186,13 +30,3 @@ button {
     font-size: clamp(0.8rem, 4vw, 1rem);
 }
 
-
-nav {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-}
-
-footer {
-    padding: 1rem;
-}

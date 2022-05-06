@@ -1,6 +1,7 @@
 import Layout from "../components/layout/Layout";
 import Head from "../components/layout/Head";
 import HeaderNav from "../components/HeaderNav";
+import HamburgerMenu from "../components/HamburgerMenu";
 import Heading from "../components/Heading";
 import Image from "next/image";
 import Logo from "../public/images/logo_rooster_white1.png";
@@ -23,7 +24,10 @@ export default function Home() {
   return (
     <Layout>
       <Head title="Home" />
-      <HeaderNav />
+      <div className="header__nav">
+        <HeaderNav />
+        <HamburgerMenu />
+      </div>
       <main>
         <div className="bg-text">spoilralert</div>
         <section>

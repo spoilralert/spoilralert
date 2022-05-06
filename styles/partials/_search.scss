@@ -1,0 +1,53 @@
+.searchbox {
+    // background-color: red;
+    // max-width: fit-content;
+    // width: 100%;
+    width: min(30ch, calc(100vw - 2rem));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+        align-self: flex-end;
+        padding: 0.1rem;
+        font-size: clamp(0.3rem, 2vw, 0.4rem);
+    }
+    
+    label {
+        padding-bottom: 5px;
+        color: $white;
+    }
+
+    div {
+        // width: clamp(80%, 50vw, 100%);
+        width: 100%;
+        background-color: $white;
+        display: flex;
+        padding: 0.2rem;
+        // box-shadow: $box-shadow;
+        border-radius: $border-radius;
+
+        input {
+            border: none;
+            background-color: $white;
+            color: $primary;
+            font-size: 12px;
+            // width: 15rem;
+            // width: clamp(10rem, 40vw, 15rem);
+            width: 100%;
+            padding-left: $padding;
+        }
+
+        button {
+            color: $primary;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 5px 10px;
+        }
+        .search-icon {
+            font-size: clamp(0.5rem, 2vw, 0.8rem);
+        }
+    }
+    
+}

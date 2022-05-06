@@ -69,3 +69,25 @@
         border-left: solid 1px $secondary;
     }
 }
+
+.movie {
+    // background-color: red;
+    margin-top: clamp(-4rem, -3vw, -2rem);
+    display: flex;
+    justify-content: space-evenly;
+
+    p {
+        padding: $padding;
+        border-left: solid 1px $secondary;
+    }
+}
+
+.container__movie__details {
+    // background-color: orange;
+    padding: $padding;
+    width: min(30ch, calc(100vw - 2rem));
+}
+.container__movie__details__info {
+    display: flex;
+    justify-content: space-evenly;
+}
