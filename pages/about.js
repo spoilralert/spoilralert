@@ -11,7 +11,7 @@ export default function About() {
       <Header />
       <main>
         <section>
-          <div className="container__about-faq">
+          <div className="container__layout about-faq">
             <Heading title="About" />
             <Paragraph
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

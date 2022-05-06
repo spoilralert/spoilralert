@@ -26,15 +26,17 @@ export default function Home() {
       <HeaderNav />
       <main>
         <div className="bg-text">spoilralert</div>
-        <section className="container__logo-search">
-          <Image
-            src={Logo}
-            width="200"
-            height="200"
-            alt="spoliralert logo, rooster in warningsign"
-            className="logo-home"
-          />
-          <Search />
+        <section>
+          <div className="container__logo-search">
+            <Image
+              src={Logo}
+              width="200"
+              height="200"
+              alt="spoliralert logo, rooster in warningsign"
+              className="logo-home"
+            />
+            <Search />
+          </div>
         </section>
 
         <section>

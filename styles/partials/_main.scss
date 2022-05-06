@@ -8,9 +8,9 @@
     .searchbox {
         margin-top: 2rem;
     }
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container__intro {
@@ -60,9 +60,7 @@
     }
 }
 
-.container__about-faq {
-    width: min(40ch, calc(100vw - 2rem));
-    padding: $padding;
+.about-faq {
     display: flex;
     flex-direction: column;
 

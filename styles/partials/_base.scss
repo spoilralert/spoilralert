@@ -24,9 +24,14 @@ main {
 }
 
 section {
+    // background-color: greenyellow;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
+}
+
+.container__layout {
+    width: $width;
 }
