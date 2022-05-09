@@ -1,0 +1,31 @@
+form {
+    background-color: $darkgrey_20opacity;
+    width: min(30ch, calc(100vw - 2rem));
+    border-radius: $border-radius;
+    padding: $padding;
+    label {
+        align-self: flex-start;
+        padding-top: $padding;
+        padding-bottom: 0.1rem;
+        color: $white;
+    }
+    input {
+        width: 100%;
+        padding: 0.3rem $padding;
+    }
+    textarea {
+        width: 100%;
+        padding: 0.3rem $padding;
+    }
+    button {
+        margin: 1rem;
+        width: 50%;
+    }
+    span {
+        color: red;
+        align-self: flex-start;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
