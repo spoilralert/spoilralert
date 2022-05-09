@@ -2,11 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     height: 300px;
+    height: fit-content;
     // width: 500px;
 
 }
    
-.tabs label {
+.tab__label {
     order: 1;
     display: flex;
     justify-content: center;
@@ -41,17 +42,24 @@
     display: none;
 }
    
-.tabs input[type="radio"]:checked + label {
-    // background: #fff;
+.tabs input[type="radio"]:checked + .tab__label {
     border-top: 1px solid $secondary;
     border-left: 1px solid $secondary;
     border-right: 1px solid $secondary;
     border-bottom: none;
 }
    
-.tabs input[type="radio"]:checked + label + .tab {
-    display: block;
+.tabs input[type="radio"]:checked + .tab__label + .tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        align-self: flex-start;
+    }
+
 }
+
+
 
 
 //   @media (max-width: 465px) {

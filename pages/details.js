@@ -5,6 +5,7 @@ import Heading from "../components/Heading";
 import Paragraph from "../components/paragraph";
 import Image from "next/image";
 import Placeholder from "../public/images/placeholder.jpg";
+import PostForm from "../components/forms/postForm";
 
 export default function Details() {
   return (
@@ -60,6 +61,7 @@ export default function Details() {
             </label>
             <div className="tab">
               <h2>Spoilrs</h2>
+              <button>Show Spoilrs</button>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -77,10 +79,7 @@ export default function Details() {
             </label>
             <div className="tab">
               <h2>Add spoilr</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              <PostForm />
             </div>
           </div>
         </section>
