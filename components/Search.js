@@ -2,9 +2,9 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faPlus } from "@fortawesome/free-solid-svg-icons";
 
-export default function Search() {
+export default function Search(props) {
   return (
-    <div className="searchbox">
+    <div className="searchbox" style={props.style}>
       <label htmlFor="search">search for spoilrs</label>
       <div>
         <button type="submit" className="search-btn">

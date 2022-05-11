@@ -5,6 +5,7 @@
 @import "partials/typography";
 @import "partials/buttons";
 @import "partials/tabs";
+@import "partials/tags";
 @import "partials/form";
 @import "partials/header";
 @import "partials/nav";
@@ -13,42 +14,44 @@
 @import "partials/main";
 @import "partials/footer";
 
-.tags__list {
-    width: 95%;
-}
-.tag__container {
-    // display: flex;
-    border-left: solid 1px $secondary;
-}
 
-.checked-item {
+.vote {
+    background-color: transparent;
+    color: $secondary;
+}
+.liked {
     color: greenyellow;
 }
-.not-checked-item {
-    color: $white;
-}
-.tag {
+
+.user__info {
     display: flex;
-    margin: 0.8rem;
-    span {
-        position: relative;
-        display: block;
-    }
-    input {
-        margin-top: -5px;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        display: block;
-        opacity: 0;
-        z-index: 2;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background-color: $darkgrey_20opacity;
+    border-radius: $border-radius;
+    padding: $padding;
+    h4 {
+        margin-top: 0;
         cursor: pointer;
     }
-}   
+    height: 5rem;
+    overflow: hidden;
+    transition: height ease-in-out 0.5s;
+}
 
-
-
-
+.expand {
+    height: 12rem;
+}
+  
+.card__info {
+    display: flex;
+    h5 {
+        padding-right: $padding;
+    }
+}
 
 a {
     text-decoration: none;

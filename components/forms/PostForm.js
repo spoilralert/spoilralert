@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import Tags from "../Tags";
+import Checkbox from "../Checkboxes";
 
 const schema = yup.object().shape({
   title: yup.string().required("Please enter a title"),
@@ -43,7 +43,7 @@ export default function PostForm() {
       />
       {errors.message && <span>{errors.message.message}</span>}
 
-      <Tags />
+      <Checkbox items={["Bad", "LOL", "Surprising", "Gory"]} />
 
       <button>Post</button>
     </form>

@@ -5,7 +5,8 @@ import Heading from "../components/Heading";
 import Paragraph from "../components/paragraph";
 import Image from "next/image";
 import Placeholder from "../public/images/placeholder.jpg";
-import PostForm from "../components/forms/postForm";
+import TabsSpoilrs from "../components/tabs/TabsSpoilrs";
+// import PostForm from "../components/forms/postForm";
 
 export default function Details() {
   return (
@@ -54,7 +55,8 @@ export default function Details() {
           </div>
         </section>
         <section>
-          <div className="tabs container__layout">
+          <TabsSpoilrs />
+          {/* <div className="tabs container__layout">
             <input type="radio" name="tabs" id="tabone" checked="checked" />
             <label htmlFor="tabone" className="tab__label">
               Spoilrs
@@ -81,7 +83,7 @@ export default function Details() {
               <h2>Add spoilr</h2>
               <PostForm />
             </div>
-          </div>
+          </div> */}
         </section>
       </main>
     </Layout>

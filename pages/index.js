@@ -39,7 +39,7 @@ export default function Home() {
               alt="spoliralert logo, rooster in warningsign"
               className="logo-home"
             />
-            <Search />
+            <Search style={{ display: "flex !important" }} />
           </div>
         </section>
 

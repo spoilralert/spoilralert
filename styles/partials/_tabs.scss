@@ -17,11 +17,17 @@
     // margin-right: 0.2rem;
     cursor: pointer;
     background-color: transparent;
+    // border-top: opacity(0);
+    // border-left: opacity(0);
+    // border-right: opacity(0);
     border-bottom: 1px solid $secondary;
     color: $secondary;
     // font-weight: bold;
     // transition: background-color ease 0.3s;
-    transition: border ease-in-out 0.5s;
+    // transition: border-top ease-in 1s;
+    // transition: border-left ease-in 1s;
+    // transition: border-right ease-in 1s;
+    // transition: border-bottom ease-in 1s;
 }
    
 .tabs .tab {

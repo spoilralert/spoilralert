@@ -8,7 +8,13 @@ export default function Requests() {
     <Layout>
       <Head title="requests" />
       <Header />
-      <Heading title="requests" />
+      <main>
+        <section>
+          <div>
+            <Heading title="requests" />
+          </div>
+        </section>
+      </main>
     </Layout>
   );
 }
