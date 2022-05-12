@@ -42,8 +42,12 @@ export default function PostForm() {
         placeholder="Write your spoilr here"
       />
       {errors.message && <span>{errors.message.message}</span>}
-
-      <Checkbox items={["Bad", "LOL", "Surprising", "Gory"]} />
+      <div className="checkbox__container">
+        <Checkbox
+          title="Choose tags:"
+          items={["Bad", "LOL", "Surprising", "Gory"]}
+        />
+      </div>
 
       <button>Post</button>
     </form>

@@ -33,19 +33,15 @@ h4 {
 }
 
 h5 {
-    // font-size: 16px;
     font-size: clamp(0.2rem, 2vw, 0.4rem);
     margin: 0;
 }
 
 p, input, textarea, span {
-    // font-size: 14px;
-    // font-size: clamp(0.4rem, 2vw, 0.5rem);
     font-size: clamp(0.3rem, 2vw, 0.4rem);
 }
 
 a, .tab__label {
-    // font-size: 14px;
     font-size: clamp(0.4rem, 2vw, 0.5rem);
     text-transform: uppercase;
     letter-spacing: 2px;

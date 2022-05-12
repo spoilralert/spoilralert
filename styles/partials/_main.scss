@@ -41,22 +41,30 @@
 .container__description__wrapper {
     display: flex;
 
-    .description {
-        margin: 0.5rem;
-        // background-color: red;
-        max-width: 15rem;
-        // height: 8rem;
-        h2, h4 {
-            color: $primary;
-        }
-        h4 {
-            line-height: 0.5;
-        }
-        p {
-            color: $primary;
-            padding: $padding;
-            border-left: solid 1px $primary;
-        }
+    
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    // background-color: red;
+    max-width: 15rem;
+    // height: 8rem;
+    // h2 {
+    //     align-self: center;
+    //     color: $primary;
+    // }
+    h4 {
+        // align-self: center;
+        margin-left: 2rem;
+        line-height: 0.5;
+        color: $primary;
+    }
+    p {
+        color: $primary;
+        padding: $padding;
+        border-left: solid 1px $primary;
     }
 }
 

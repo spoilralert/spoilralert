@@ -9,8 +9,12 @@ button {
     text-align: center;
     padding: 10px 100px;
     padding: clamp(0.1rem, 2vw, 0.6rem);
-    
+
     &:hover {
         cursor: pointer;
     }
+}
+
+.show-btn {
+    margin: 1rem;
 }

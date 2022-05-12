@@ -18,11 +18,11 @@ export default function Checkbox(props) {
     checked.includes(item) ? "checked-item" : "not-checked-item";
 
   return (
-    <div className="tags__list">
+    <div className="checklist">
       <h4>{props.title}</h4>
-      <div className="tag__container">
+      <div className="checklist__container">
         {checkList.map((item, index) => (
-          <div key={index} className="tag">
+          <div key={index} className="checklist__item">
             <span className={isChecked(item)}>{item}</span>
             <input value={item} type="checkbox" onChange={handleCheck} />
           </div>

@@ -5,8 +5,9 @@
 @import "partials/typography";
 @import "partials/buttons";
 @import "partials/tabs";
-@import "partials/tags";
+@import "partials/checkbox";
 @import "partials/form";
+@import "partials/post";
 @import "partials/header";
 @import "partials/nav";
 @import "partials/hamburgerMenu";
@@ -15,43 +16,13 @@
 @import "partials/footer";
 
 
-.vote {
-    background-color: transparent;
-    color: $secondary;
-}
-.liked {
-    color: greenyellow;
-}
-
 .user__info {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.card {
-    background-color: $darkgrey_20opacity;
-    border-radius: $border-radius;
-    padding: $padding;
-    h4 {
-        margin-top: 0;
-        cursor: pointer;
-    }
-    height: 5rem;
-    overflow: hidden;
-    transition: height ease-in-out 0.5s;
-}
 
-.expand {
-    height: 12rem;
-}
-  
-.card__info {
-    display: flex;
-    h5 {
-        padding-right: $padding;
-    }
-}
 
 a {
     text-decoration: none;

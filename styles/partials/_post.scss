@@ -1,0 +1,75 @@
+.card {
+    background-color: $darkgrey_20opacity;
+    border-radius: $border-radius;
+    // box-shadow: inset 0 -10px 7px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+    padding: $padding;
+    h4 {
+        margin-top: 0;
+        cursor: pointer;
+    }
+    height: 6rem;
+    overflow: hidden;
+    transition: height ease-in-out 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__text {
+    // height: 50%;
+    overflow: hidden;
+    transition: height ease-in-out 1s;
+}
+
+.expand {
+    height: 12rem;
+    // height: fit-content;
+}
+
+.expand-text {
+    // height: 10rem;
+    height: fit-content;
+}
+  
+.card__info {
+    display: flex;
+    h5 {
+        padding-right: $padding;
+    }
+}
+
+.hidden {
+    filter: blur(0.1rem);
+ }
+ .show {
+     filter: blur(0);
+ }
+
+
+
+.vote__container {
+    background-color: $darkgrey_20opacity;
+    display: flex;
+    align-items: center;
+
+    h5 {
+        padding-left: $padding;
+    }
+}
+.vote {
+    background-color: transparent;
+    color: $secondary;
+    padding: 10px;
+}
+.vote-icon {
+    font-size: clamp(0.4rem, 2vw, 0.4rem);
+    padding-left: 5px;
+}
+.upvoted {
+    color: greenyellow;
+}
+.downvoted {
+    color: red;
+}
+

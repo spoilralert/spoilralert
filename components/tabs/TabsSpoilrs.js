@@ -1,8 +1,24 @@
+import { useState } from "react";
 import Paragraph from "../paragraph";
 import PostForm from "../forms/postForm";
 import Post from "../Post";
 
 export default function TabsSpoilrs() {
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => {
+    setShow(!show);
+    const button = document.querySelector(".show-btn");
+
+    if (!show) {
+      setShow(!show);
+      button.innerText = "Hide spoilrs";
+    } else {
+      setShow(!show);
+      button.innerText = "Show spoilrs";
+    }
+  };
+
   return (
     <div className="tabs container__layout">
       <input type="radio" name="tabs" id="tabone" checked="checked" />
@@ -11,8 +27,12 @@ export default function TabsSpoilrs() {
       </label>
       <div className="tab">
         <h2>Spoilrs</h2>
-        <button>Show Spoilrs</button>
-        <Post />
+        <button className="show-btn" onClick={handleShow}>
+          Show Spoilrs
+        </button>
+        <div className={show ? "show" : "hidden"}>
+          <Post />
+        </div>
       </div>
       <input type="radio" name="tabs" id="tabtwo" />
       <label htmlFor="tabtwo" className="tab__label">
