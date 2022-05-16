@@ -25,6 +25,9 @@ form {
         color: red;
         align-self: flex-start;
     }
+    a {
+        color: $primary;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;

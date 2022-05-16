@@ -36,15 +36,12 @@
 //    left: -5px;
    cursor: pointer;
    
-   opacity: 0; /* hide this */
-   z-index: 2; /* and place it over the hamburger */
+   opacity: 0;
+   z-index: 2;
    
    -webkit-touch-callout: none;
 }
  
- /*
-  * Just a quick hamburger
-  */
 #menuToggle span {
    display: block;
    width: 33px;
@@ -52,16 +49,13 @@
    height: 2px;
    margin-bottom: 5px;
    position: relative;
-   
    background-color: #cdcdcd;
    background-color: $white;
    border-radius: 3px;
-   
    z-index: 1;
-   
 //    transform-origin: 4px 0px;
    transform-origin: 2px 0px;
-   
+
    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                background-color 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                opacity 0.55s ease;
@@ -154,15 +148,5 @@ margin-left: -255px;
 @media (max-width: 900px) {
     .header__sign-log {
         display: none;
-    }
-    // .searchbox {
-    //     display: none !important;
-    // }
-}
-
-@media (max-width: 700px) {
-    
-    .searchbox {
-        display: none !important;
     }
 }

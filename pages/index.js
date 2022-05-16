@@ -16,10 +16,6 @@ import {
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 
-// import Head from 'next/head'
-// import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
-
 export default function Home() {
   return (
     <Layout>
@@ -31,7 +27,7 @@ export default function Home() {
       <main>
         <div className="bg-text">spoilralert</div>
         <section>
-          <div className="container__logo-search">
+          <div className="logo-search__container">
             <Image
               src={Logo}
               width="200"
@@ -44,7 +40,7 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="container__intro">
+          <div className="intro__container">
             <Heading title="Long story short" />
             <div>
               <h3>-get movie endings and spoilers of popular titles</h3>
@@ -52,19 +48,16 @@ export default function Home() {
               <h3>-climb our spoilr hierarchy</h3>
               <h3>-discuss movies with other peerse</h3>
             </div>
-            {/* <div>
-            <button>View requested spoilrs</button>
-          </div> */}
             <button>view requested spoilrs</button>
           </div>
         </section>
 
-        <section className="container__description">
+        <section className="description__container">
           <h2>how does it work?</h2>
 
           <div className="description">
             <h4>Finding spoilers:</h4>
-            <div className="container__description__wrapper">
+            <div className="description__content">
               <FontAwesomeIcon
                 icon={faSearch}
                 // style={{ fontSize: 50 }}
@@ -76,7 +69,7 @@ export default function Home() {
 
           <div className="description">
             <h4>Making a spoiler request:</h4>
-            <div className="container__description__wrapper">
+            <div className="description__content">
               <FontAwesomeIcon
                 icon={faPlus}
                 // style={{ fontSize: 50 }}
@@ -91,7 +84,7 @@ export default function Home() {
 
           <div className="description">
             <h4>Creating account:</h4>
-            <div className="container__description__wrapper">
+            <div className="description__content">
               <FontAwesomeIcon
                 icon={faUserNinja}
                 // style={{ fontSize: 50 }}
@@ -107,7 +100,7 @@ export default function Home() {
 
           <div className="description">
             <h4>Adding spoiler:</h4>
-            <div className="container__description__wrapper">
+            <div className="description__content">
               <FontAwesomeIcon
                 icon={faStar}
                 // style={{ fontSize: 50 }}

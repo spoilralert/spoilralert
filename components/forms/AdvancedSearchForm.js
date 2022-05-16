@@ -1,4 +1,5 @@
 import Checkbox from "../Checkboxes";
+import Link from "next/link";
 
 export default function AdvancedSearchForm() {
   return (
@@ -15,7 +16,9 @@ export default function AdvancedSearchForm() {
           items={["Bad", "LOL", "Surprising", "Gory", "Super"]}
         />
       </div>
-      <button>Search</button>
+      <button>
+        <Link href="/advancedSearchResults">Search</Link>
+      </button>
     </form>
   );
 }

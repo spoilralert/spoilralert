@@ -17,18 +17,15 @@
 }
 
 .card__text {
-    // height: 50%;
     overflow: hidden;
     transition: height ease-in-out 1s;
 }
 
 .expand {
     height: 12rem;
-    // height: fit-content;
 }
 
 .expand-text {
-    // height: 10rem;
     height: fit-content;
 }
   
