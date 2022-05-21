@@ -2,8 +2,9 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
-export default function Vote() {
-  const [count, setCount] = useState(0);
+export default function Vote({ spoilrs }) {
+  const votes = spoilrs.votes;
+  const [count, setCount] = useState(votes);
   const [upVoted, setUpVoted] = useState(false);
   const [downVoted, setDownVoted] = useState(false);
 

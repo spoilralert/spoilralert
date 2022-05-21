@@ -15,7 +15,7 @@ export default function Header() {
           </a>
         </Link>
       </div>
-      <div>
+      <div className="header__search">
         <Search />
       </div>
       <div className="header__nav">

@@ -10,7 +10,7 @@ export default function Nav() {
       <Link href="/signup">Sign up</Link>
       <Link href="/login">Login</Link>
       <Link href="/profile">Profile</Link>
-      <Link href="/details">details</Link>
+      {/* <Link href="/movieDetails/movieId">details</Link> */}
     </nav>
   );
 }

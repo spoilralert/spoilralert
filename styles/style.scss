@@ -22,7 +22,9 @@
     align-items: center;
 }
 
-
+.image__movie__poster {
+    box-shadow: $box-shadow;
+}
 
 a {
     text-decoration: none;
@@ -34,5 +36,11 @@ a {
     align-self: center;
     padding: $padding;
     font-size: clamp(0.8rem, 4vw, 1rem);
+}
+
+.image__movie__banner {
+    margin-top: clamp(0.1rem, 2vw, 1rem);
+    display: flex;
+    justify-content: center;
 }
 

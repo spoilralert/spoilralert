@@ -7,13 +7,9 @@ export default function Search(props) {
     <div className="searchbox" style={props.style}>
       <label htmlFor="search">search for spoilrs</label>
       <div>
-        <button type="submit" className="search-btn">
-          <FontAwesomeIcon
-            icon={faPlus}
-            // style={{ fontSize: 25 }}
-            className="search-icon"
-          />
-        </button>
+        {/* <button type="submit" className="search-btn">
+          <FontAwesomeIcon icon={faPlus} className="search-icon" />
+        </button> */}
         <input name="search" type="text" placeholder="film title" />
         <button type="submit" className="search-btn">
           <FontAwesomeIcon

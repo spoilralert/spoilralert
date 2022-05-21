@@ -53,8 +53,10 @@
 
 @media (max-width: 700px) {
     
-    .searchbox {
-        display: none !important;
+    .header__search {
+        .searchbox {
+            display: none !important;
+        } 
     }
     
 }

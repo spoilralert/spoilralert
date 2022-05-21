@@ -12,6 +12,7 @@ $lightgrey: #9E9E9E;
 // other
 
 $border-radius: 2px;
-$box-shadow: 0 5px 10px $primary, 0 0 0 5px $darkgrey;
+// $box-shadow: 0 5px 10px $primary, 0 0 0 5px $darkgrey;
+$box-shadow: 0 0px 1px $primary, 0 0 0 1px $primary;
 $padding: 0.5rem;
 $width: min(40ch, calc(100vw - 2rem));

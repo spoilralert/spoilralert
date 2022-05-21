@@ -30,9 +30,9 @@ export default function HamburgerMenu() {
           <li>
             <Link href="/profile">Profile</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/details">details</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

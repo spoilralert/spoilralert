@@ -83,6 +83,7 @@
     margin-top: clamp(-4rem, -3vw, -2rem);
     display: flex;
     justify-content: space-evenly;
+    z-index: 1;
 
     p {
         padding: $padding;
@@ -92,10 +93,15 @@
 
 .container__movie__details {
     // background-color: orange;
+    margin-top: 1rem;
     padding: $padding;
     width: min(30ch, calc(100vw - 2rem));
 }
 .container__movie__details__info {
     display: flex;
-    justify-content: space-evenly;
+    margin-bottom: 0.5rem;
+    h5 {
+        color: $lightgrey;
+        margin-right: 0.5rem;
+    }
 }
