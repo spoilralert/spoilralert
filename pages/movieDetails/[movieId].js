@@ -6,14 +6,18 @@ import Paragraph from "../../components/paragraph";
 import Image from "next/image";
 import Placeholder from "../../public/images/placeholder.jpg";
 import TabsSpoilrs from "../../components/tabs/TabsSpoilrs";
-import { LoadMovie, LoadSpoilrsForMovie } from "../../lib/strapi";
+// import { LoadMovie, LoadSpoilrsForMovie } from "../../lib/strapi";
+import { LoadMovie } from "../../lib/movies";
+import { GetTags, LoadSpoilrsForMovie } from "../../lib/spoilrs";
 
-export default function Details({ data, spoilrsData }) {
+export default function Details({ data, spoilrsData, movieId, tagsData }) {
   const movie = data.movie.data.attributes;
-  const banner = movie.image.data.attributes.url;
-  const poster = movie.cover_image.data.attributes.formats.small.url;
-  const spoilrs = spoilrsData.movie.data.attributes.spoilrs.data[0].attributes;
-  console.log("spoilrs = " + spoilrs);
+  const banner = movie.backdrop_url;
+  const poster = movie.poster_url;
+  const spoilrs = spoilrsData.movie.data.attributes.spoilrs.data;
+  const tags = tagsData.tags.data;
+  console.log("MOVIE");
+  console.log(movie);
 
   return (
     <Layout>
@@ -49,7 +53,7 @@ export default function Details({ data, spoilrsData }) {
           </div>
         </section>
         <section>
-          <TabsSpoilrs spoilrs={spoilrs} />
+          <TabsSpoilrs spoilrs={spoilrs} movieId={movieId} tags={tags} />
         </section>
       </main>
     </Layout>
@@ -57,12 +61,12 @@ export default function Details({ data, spoilrsData }) {
 }
 
 export async function getServerSideProps(context) {
-  console.log(context.query);
   const { movieId } = context.query;
   const data = await LoadMovie(movieId);
   const spoilrsData = await LoadSpoilrsForMovie(movieId);
+  const tagsData = await GetTags();
 
   return {
-    props: { data, spoilrsData },
+    props: { data, spoilrsData, movieId, tagsData },
   };
 }

@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { Register } from "../../lib/auth";
+import { useState } from "react";
 
 const schema = yup.object().shape({
   username: yup.string().required("Please enter a username"),
@@ -15,6 +17,7 @@ const schema = yup.object().shape({
 });
 
 export default function SignupForm() {
+  const [invalidSignUpState, setInvalidSignUpState] = useState(false);
   const {
     register,
     handleSubmit,
@@ -23,8 +26,16 @@ export default function SignupForm() {
     resolver: yupResolver(schema),
   });
 
-  function onSubmit(data) {
+  async function onSubmit(data) {
     console.log(data);
+    try {
+      const response = await Register(data.email, data.username, data.password);
+      console.log(response);
+      location.href = "/login";
+    } catch (error) {
+      console.log(error);
+      setInvalidSignUpState(true);
+    }
   }
 
   console.log(errors);
@@ -42,7 +53,9 @@ export default function SignupForm() {
       <label htmlFor="password">Password:</label>
       <input name="password" {...register("password")} placeholder="password" />
       {errors.password && <span>{errors.password.message}</span>}
-
+      {invalidSignUpState && (
+        <div className="message">Username or email is already taken</div>
+      )}
       <button>Sign Up</button>
     </form>
   );

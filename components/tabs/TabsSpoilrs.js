@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Paragraph from "../paragraph";
+// import Paragraph from "../paragraph";
 import PostForm from "../forms/postForm";
 import Post from "../Post";
 import { LoadSpoilrsForMovie } from "../../lib/strapi";
 
-export default function TabsSpoilrs({ spoilrs }) {
+export default function TabsSpoilrs({ spoilrs, movieId, tags }) {
   const [show, setShow] = useState(false);
 
   const handleShow = () => {
@@ -32,7 +32,9 @@ export default function TabsSpoilrs({ spoilrs }) {
           Show Spoilrs
         </button>
         <div className={show ? "show" : "hidden"}>
-          <Post spoilrs={spoilrs} />
+          {spoilrs.map((spoilr, i) => (
+            <Post key={i} spoilrs={spoilr.attributes} />
+          ))}
         </div>
       </div>
       <input type="radio" name="tabs" id="tabtwo" />
@@ -41,7 +43,7 @@ export default function TabsSpoilrs({ spoilrs }) {
       </label>
       <div className="tab">
         {/* <h2>Add spoilr</h2> */}
-        <PostForm />
+        <PostForm movieId={movieId} tags={tags} />
       </div>
     </div>
   );

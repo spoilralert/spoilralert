@@ -10,7 +10,12 @@ export default function Search(props) {
         {/* <button type="submit" className="search-btn">
           <FontAwesomeIcon icon={faPlus} className="search-icon" />
         </button> */}
-        <input name="search" type="text" placeholder="film title" />
+        <input
+          name="search"
+          type="text"
+          placeholder="film title"
+          onChange={props.handleChange}
+        />
         <button type="submit" className="search-btn">
           <FontAwesomeIcon
             icon={faSearch}

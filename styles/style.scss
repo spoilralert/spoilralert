@@ -29,6 +29,10 @@
 a {
     text-decoration: none;
     padding: $padding;
+    transition: color 0.3s ease;
+    &:hover {
+        color: $secondary_50opacity;
+    }
 }
 
 .icon {
@@ -44,3 +48,13 @@ a {
     justify-content: center;
 }
 
+
+.message {
+   color: red; 
+}
+
+.search__results {
+    background-color: $secondary;
+    height: 200px;
+    color: black;
+}

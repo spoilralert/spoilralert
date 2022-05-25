@@ -9,12 +9,34 @@ button {
     text-align: center;
     padding: 10px 100px;
     padding: clamp(0.1rem, 2vw, 0.6rem);
-
+    transition: box-shadow 0.1s ease-in;
+    a {
+        color: $primary;
+        &:hover {
+            color: $primary;
+        }
+    }
     &:hover {
         cursor: pointer;
+        box-shadow: $box-shadow-grey;
+    }
+    &:active {
+        background-color: $secondary_50opacity;
+        // box-shadow: none;
     }
 }
 
 .show-btn {
     margin: 1rem;
+}
+
+.logOut {
+    background-color: transparent;
+    padding: $padding;
+    transition: color 0.3s ease;
+    align-self: flex-start;
+
+    &:hover {
+        color: $secondary_50opacity;
+    }
 }

@@ -1,6 +1,10 @@
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { Login } from "../../lib/auth";
+import { saveToken, saveUser } from "../../lib/storage";
+import { useState } from "react";
+// import DisplayMessage from "../DisplayMessage";
 
 const schema = yup.object().shape({
   email: yup
@@ -10,10 +14,12 @@ const schema = yup.object().shape({
   password: yup
     .string()
     .required("Please enter your password")
-    .min(5, "The message must be at least 5 characters"),
+    .min(5, "The password must be at least 5 characters"),
 });
 
 export default function LoginForm() {
+  const [invalidLoginState, setInvalidLoginState] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -22,11 +28,22 @@ export default function LoginForm() {
     resolver: yupResolver(schema),
   });
 
-  function onSubmit(data) {
+  async function onSubmit(data) {
     console.log(data);
-  }
 
-  console.log(errors);
+    try {
+      const response = await Login(data.email, data.password);
+      console.log(response);
+
+      saveToken(response.login.jwt);
+      saveUser(response.login.user);
+
+      location.href = "/";
+    } catch (e) {
+      console.log(e.message);
+      setInvalidLoginState(true);
+    }
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -37,7 +54,9 @@ export default function LoginForm() {
       <label htmlFor="password">Password:</label>
       <input name="password" {...register("password")} placeholder="password" />
       {errors.password && <span>{errors.password.message}</span>}
-
+      {invalidLoginState && (
+        <div className="message">Invalid email or password</div>
+      )}
       <button>Login</button>
     </form>
   );

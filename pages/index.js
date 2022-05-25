@@ -7,6 +7,13 @@ import Image from "next/image";
 import Logo from "../public/images/logo_rooster_white1.png";
 import Paragraph from "../components/paragraph";
 import Search from "../components/search";
+import SearchResults from "../components/SearchResults";
+import Link from "next/link";
+import debounce from "lodash.debounce";
+import { SearchMovies } from "../lib/movies";
+import { useState } from "react";
+import { SearchMovie } from "../lib/movieDB";
+import { FetchMovieFromMovieDbAndPopulateStrapi } from "../lib/movies";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,6 +24,57 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
+  const [movies, setMovies] = useState([]);
+  const [value, setValue] = useState("");
+  const [movieDbMovies, setMovieDbMovies] = useState([]);
+  const [searchStarted, setSearchStarted] = useState(false);
+
+  const handleChange = (e) => {
+    if (e.target.value === "") {
+      setMovies([]);
+      setMovieDbMovies([]);
+    }
+    setValue(e.target.value);
+    handleSearch(e.target.value);
+  };
+
+  const handleSearch = debounce(async (value) => {
+    if (value !== "") {
+      const response = await SearchMovies(value);
+      setMovies(response.movies.data);
+      setSearchStarted(true);
+    } else {
+      setMovies([]);
+      setSearchStarted(false);
+    }
+  }, 300);
+
+  async function searchMovieDb() {
+    if (value !== "") {
+      const response = await SearchMovie(value);
+      setMovieDbMovies(response.data.results);
+      console.log(movieDbMovies);
+    } else {
+      setMovieDbMovies([]);
+    }
+  }
+
+  async function addMovieToStrapi(e) {
+    const movieId = e.target.getAttribute("data-key");
+    const { data, strapiError, movieDbError } =
+      await FetchMovieFromMovieDbAndPopulateStrapi(movieId);
+    if (strapiError) {
+      console.log("StrapiError: " + strapiError);
+    }
+    if (movieDbError) {
+      console.log("MovieDbError: " + movieDbError);
+    }
+    if (data) {
+      console.log(data);
+      location = "/movieDetails" + data.id;
+    }
+  }
+
   return (
     <Layout>
       <Head title="Home" />
@@ -35,7 +93,20 @@ export default function Home() {
               alt="spoliralert logo, rooster in warningsign"
               className="logo-home"
             />
-            <Search style={{ display: "flex !important" }} />
+            <div className="search__container">
+              <Search
+                style={{ display: "flex !important" }}
+                handleChange={handleChange}
+              />
+              <SearchResults
+                movies={movies}
+                searchMovieDb={searchMovieDb}
+                movieDbMovies={movieDbMovies}
+                searchValue={value}
+                searchStarted={searchStarted}
+                addMovieToStrapi={addMovieToStrapi}
+              />
+            </div>
           </div>
         </section>
 
@@ -48,7 +119,9 @@ export default function Home() {
               <h3>-climb our spoilr hierarchy</h3>
               <h3>-discuss movies with other peerse</h3>
             </div>
-            <button>view requested spoilrs</button>
+            <button>
+              <Link href="/requests">View Requested spoilrs</Link>
+            </button>
           </div>
         </section>
 
