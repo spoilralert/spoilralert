@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import Paragraph from "../paragraph";
-import PostForm from "../forms/postForm";
+import PostForm from "../forms/PostForm";
 import Post from "../Post";
 import { LoadSpoilrsForMovie } from "../../lib/strapi";
 

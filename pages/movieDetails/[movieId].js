@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/paragraph";
 import Image from "next/image";
-import Placeholder from "../../public/images/placeholder.jpg";
+// import Placeholder from "../../public/images/placeholder.jpg";
 import TabsSpoilrs from "../../components/tabs/TabsSpoilrs";
 // import { LoadMovie, LoadSpoilrsForMovie } from "../../lib/strapi";
 import { LoadMovie } from "../../lib/movies";

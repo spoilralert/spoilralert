@@ -71,7 +71,7 @@ export default function Home() {
     }
     if (data) {
       console.log(data);
-      location = "/movieDetails" + data.id;
+      location = "/movieDetails/" + data.createMovie.data.id;
     }
   }
 
