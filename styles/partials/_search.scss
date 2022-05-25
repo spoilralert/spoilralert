@@ -66,12 +66,15 @@
     }
 }
 
-.search__list {
+.search__item {
     display: flex;
     margin-bottom: 0.5rem;
     
     .search__description {
     padding-left: $padding;
+    }
+    &:hover {
+        cursor: pointer;
     }
 }
 

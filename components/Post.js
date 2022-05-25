@@ -1,9 +1,15 @@
 import { useState } from "react";
+import { useEffect } from "react";
 
 import Paragraph from "./paragraph";
 import Vote from "./Vote";
 
 export default function Post({ spoilrs }) {
+  useEffect(() => {
+    spoilrs.tags.data.map((tag) => {
+      console.log(tag.attributes.tag);
+    });
+  });
   const [expand, setExpand] = useState(false);
   const username = spoilrs.user.data.attributes.username;
 
@@ -20,6 +26,13 @@ export default function Post({ spoilrs }) {
       </div>
       <div className={`card__text ${expand ? "expand-text" : ""}`}>
         <Paragraph text={spoilrs.content} />
+        <div className="tags__container">
+          {spoilrs.tags.data.map((tag) => (
+            <h5 key={tag.id} className="tag">
+              {tag.attributes.tag}
+            </h5>
+          ))}
+        </div>
       </div>
 
       <div>

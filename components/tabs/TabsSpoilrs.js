@@ -2,7 +2,8 @@ import { useState } from "react";
 // import Paragraph from "../paragraph";
 import PostForm from "../forms/PostForm";
 import Post from "../Post";
-import { LoadSpoilrsForMovie } from "../../lib/strapi";
+// import { LoadSpoilrsForMovie } from "../../lib/strapi";
+import { AddSpoilrRequest } from "../../lib/spoilrs";
 
 export default function TabsSpoilrs({ spoilrs, movieId, tags }) {
   const [show, setShow] = useState(false);
@@ -27,10 +28,20 @@ export default function TabsSpoilrs({ spoilrs, movieId, tags }) {
         Spoilrs
       </label>
       <div className="tab">
-        {/* <h2>Spoilrs</h2> */}
-        <button className="show-btn" onClick={handleShow}>
-          Show Spoilrs
-        </button>
+        {spoilrs.length === 0 && (
+          <div className="request__cta">
+            <h5>
+              Oh no! There is no spoilrs added yet, do you want to make a
+              request?
+            </h5>
+            <button onClick={AddSpoilrRequest}>Add Spoilr request</button>
+          </div>
+        )}
+        {spoilrs.length > 0 && (
+          <button className="show-btn" onClick={handleShow}>
+            Show Spoilrs
+          </button>
+        )}
         <div className={show ? "show" : "hidden"}>
           {spoilrs.map((spoilr, i) => (
             <Post key={i} spoilrs={spoilr.attributes} />
@@ -42,7 +53,6 @@ export default function TabsSpoilrs({ spoilrs, movieId, tags }) {
         Add spoilr
       </label>
       <div className="tab">
-        {/* <h2>Add spoilr</h2> */}
         <PostForm movieId={movieId} tags={tags} />
       </div>
     </div>

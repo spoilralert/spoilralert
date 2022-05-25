@@ -6,7 +6,7 @@ import Heading from "../components/Heading";
 import Image from "next/image";
 import Logo from "../public/images/logo_rooster_white1.png";
 import Paragraph from "../components/paragraph";
-import Search from "../components/search";
+import Search from "../components/Search";
 import SearchResults from "../components/SearchResults";
 import Link from "next/link";
 import debounce from "lodash.debounce";

@@ -23,7 +23,8 @@
 }
 
 .expand {
-    height: 12rem;
+    height: 13rem;
+    // height: fit-content;
 }
 
 .expand-text {
@@ -44,7 +45,13 @@
      filter: blur(0);
  }
 
+ .tags__container {
+    display: flex;
+}
 
+.tag {
+    padding-left: $padding;
+}
 
 .vote__container {
     background-color: $darkgrey_20opacity;
@@ -59,6 +66,12 @@
     background-color: transparent;
     color: $secondary;
     padding: 10px;
+    &:hover {
+        box-shadow: none;
+    }
+    &:active {
+        background-color: transparent;
+    }
 }
 .vote-icon {
     font-size: clamp(0.4rem, 2vw, 0.4rem);

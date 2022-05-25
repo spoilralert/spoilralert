@@ -38,5 +38,10 @@ button {
 
     &:hover {
         color: $secondary_50opacity;
+        cursor: pointer;
+        box-shadow: none;
+    }
+    &:active {
+        background-color: none;
     }
 }

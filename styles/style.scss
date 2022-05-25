@@ -50,9 +50,28 @@ a {
 
 
 .message {
-   color: red; 
+   color: $secondary;
+   font-size: clamp(0.2rem, 2vw, 0.4rem); 
+   padding: $padding;
 }
 
+.request__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $padding;
+  h5 {
+      margin-bottom: 1rem;
+  }
+}
 
+.tags__container {
+    display: flex;
+
+}
+
+.tag {
+    padding: $padding;
+}
 
 
