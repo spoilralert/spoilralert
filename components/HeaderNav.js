@@ -15,7 +15,7 @@ export default function HeaderNav() {
     return (
       <div className="header__sign-log">
         <Link href="/profile">Profile</Link>
-        <button className="logOut" onClick={LogOut}>
+        <button className="logout-btn" onClick={LogOut}>
           Log out
         </button>
       </div>

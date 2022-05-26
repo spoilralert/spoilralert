@@ -114,10 +114,10 @@ export default function Home() {
           <div className="intro__container">
             <Heading title="Long story short" />
             <div>
-              <h3>-get movie endings and spoilers of popular titles</h3>
-              <h3>-share your knowledge by adding your own spoilrs</h3>
-              <h3>-climb our spoilr hierarchy</h3>
-              <h3>-discuss movies with other peerse</h3>
+              <h3>-Get movie endings and spoilers of popular titles</h3>
+              <h3>-Share your knowledge by adding your own spoilrs</h3>
+              <h3>-Climb our spoilr hierarchy</h3>
+              {/* <h3>-discuss movies with other peerse</h3> */}
             </div>
             <button>
               <Link href="/requests">View Requested spoilrs</Link>
@@ -126,7 +126,7 @@ export default function Home() {
         </section>
 
         <section className="description__container">
-          <h2>how does it work?</h2>
+          <h2>How does it work?</h2>
 
           <div className="description">
             <h4>Finding spoilers:</h4>
@@ -143,11 +143,7 @@ export default function Home() {
           <div className="description">
             <h4>Making a spoiler request:</h4>
             <div className="description__content">
-              <FontAwesomeIcon
-                icon={faPlus}
-                // style={{ fontSize: 50 }}
-                className="icon"
-              />
+              <FontAwesomeIcon icon={faPlus} className="icon" />
               <Paragraph
                 text="-Is your desired title not in the search results? 
               don't worry, you can make a request for spoilers by clicking the plus sign on the search box, find your title and make a spoiler request!"
@@ -158,11 +154,7 @@ export default function Home() {
           <div className="description">
             <h4>Creating account:</h4>
             <div className="description__content">
-              <FontAwesomeIcon
-                icon={faUserNinja}
-                // style={{ fontSize: 50 }}
-                className="icon"
-              />
+              <FontAwesomeIcon icon={faUserNinja} className="icon" />
               <Paragraph
                 text="-By creating an account you agree to sell your soul to us, no of course not. 
                   By creating an account you get to add spoilrs, rate other spoilrs and be part of our happy farm. 
@@ -174,11 +166,7 @@ export default function Home() {
           <div className="description">
             <h4>Adding spoiler:</h4>
             <div className="description__content">
-              <FontAwesomeIcon
-                icon={faStar}
-                // style={{ fontSize: 50 }}
-                className="icon"
-              />
+              <FontAwesomeIcon icon={faStar} className="icon" />
               <Paragraph
                 text="-Want to add spoilers? You are now our best friend! 
                 Just find a title and get to it my friend! 

@@ -2,7 +2,6 @@ button {
     background-color: $secondary;
     border: none;
     border-radius: $border-radius;
-    // font-size: 16px;
     font-size: clamp(0.4rem, 2vw, 0.6rem);
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -22,15 +21,14 @@ button {
     }
     &:active {
         background-color: $secondary_50opacity;
-        // box-shadow: none;
     }
 }
 
-.show-btn {
+.tab__cta__btn {
     margin: 1rem;
 }
 
-.logOut {
+.logout-btn {
     background-color: transparent;
     padding: $padding;
     transition: color 0.3s ease;

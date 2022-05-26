@@ -1,3 +1,5 @@
+// --index page--
+
 .logo-search__container {
     // width: 100%;
     // height: 80%;
@@ -32,6 +34,9 @@
 
 .description__container {
     background-color: $secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h2 {
         color: $primary;
         padding-bottom: $padding;
@@ -68,6 +73,9 @@
     }
 }
 
+
+// --about & faq page--
+
 .about-faq {
     display: flex;
     flex-direction: column;
@@ -77,6 +85,13 @@
         border-left: solid 1px $secondary;
     }
 }
+
+.container__layout {
+    width: $width;
+}
+
+
+// --movie details page--
 
 .movie {
     // background-color: red;
@@ -92,7 +107,6 @@
 }
 
 .container__movie__details {
-    // background-color: orange;
     margin-top: 1rem;
     padding: $padding;
     width: min(30ch, calc(100vw - 2rem));

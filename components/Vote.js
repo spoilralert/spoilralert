@@ -53,18 +53,10 @@ export default function Vote({ spoilrs }) {
   return (
     <div className="vote__container">
       <button className="vote upvote-btn" onClick={handleUpVote}>
-        <FontAwesomeIcon
-          icon={faArrowUp}
-          //   style={{ fontSize: 15 }}
-          className="vote-icon"
-        />
+        <FontAwesomeIcon icon={faArrowUp} className="vote-icon" />
       </button>
       <button className="vote downvote-btn" onClick={handleDownVote}>
-        <FontAwesomeIcon
-          icon={faArrowDown}
-          //   style={{ fontSize: 15 }}
-          className="vote-icon"
-        />
+        <FontAwesomeIcon icon={faArrowDown} className="vote-icon" />
       </button>
       <h5>{count}</h5>
     </div>

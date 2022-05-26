@@ -34,11 +34,13 @@ export default function TabsSpoilrs({ spoilrs, movieId, tags }) {
               Oh no! There is no spoilrs added yet, do you want to make a
               request?
             </h5>
-            <button onClick={AddSpoilrRequest}>Add Spoilr request</button>
+            <button onClick={AddSpoilrRequest} className="tab__cta__btn">
+              Add Spoilr request
+            </button>
           </div>
         )}
         {spoilrs.length > 0 && (
-          <button className="show-btn" onClick={handleShow}>
+          <button className="tab__cta__btn show-btn" onClick={handleShow}>
             Show Spoilrs
           </button>
         )}
