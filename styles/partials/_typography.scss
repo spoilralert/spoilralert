@@ -51,7 +51,6 @@ a, .tab__label, .logout-btn {
     width: 100%;
     -webkit-text-stroke: 1px $darkgrey_20opacity;
     color: transparent;
-    // font-size: 12rem;
     font-size: clamp(2rem, 20vw, 12rem);
     line-height: 0.6;
     z-index: -10;

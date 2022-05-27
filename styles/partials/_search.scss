@@ -1,7 +1,4 @@
 .searchbox {
-    // background-color: red;
-    // max-width: fit-content;
-    // width: 100%;
     width: min(30ch, calc(100vw - 2rem));
     display: flex;
     flex-direction: column;
@@ -20,7 +17,6 @@
     }
 
     div {
-        // width: clamp(80%, 50vw, 100%);
         width: 100%;
         background-color: $white;
         display: flex;
@@ -32,8 +28,6 @@
             background-color: $white;
             color: $primary;
             font-size: 12px;
-            // width: 15rem;
-            // width: clamp(10rem, 40vw, 15rem);
             width: 100%;
             padding-left: $padding;
         }
@@ -72,7 +66,6 @@
 }
 .requested_results {
     width: min(30ch, calc(100vw - 2rem));
-    // position: absolute;
     background-color: $primary;
     height: fit-content;
     color: black;
