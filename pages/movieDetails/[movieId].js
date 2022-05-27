@@ -38,11 +38,9 @@ export default function Details({ data, spoilrsData, movieId, tagsData }) {
               <Heading title={movie.title} />
               <div className="container__movie__details__info">
                 <h5>{movie.release_date}</h5>
-                {/* <h5>Genre</h5> */}
-                <h5>{movie.genre1}</h5>
-                <h5>{movie.genre2}</h5>
-                <h5>{movie.genre3}</h5>
-                {/* <h5>Runtime</h5> */}
+                {movie.genre1 !== "undefined" && <h5>{movie.genre1}</h5>}
+                {movie.genre2 !== "undefined" && <h5>{movie.genre2}</h5>}
+                {movie.genre3 !== "undefined" && <h5>{movie.genre3}</h5>}
               </div>
 
               <div>
@@ -53,7 +51,12 @@ export default function Details({ data, spoilrsData, movieId, tagsData }) {
           </div>
         </section>
         <section>
-          <TabsSpoilrs spoilrs={spoilrs} movieId={movieId} tags={tags} />
+          <TabsSpoilrs
+            spoilrs={spoilrs}
+            movie={movie}
+            movieId={movieId}
+            tags={tags}
+          />
         </section>
       </main>
     </Layout>

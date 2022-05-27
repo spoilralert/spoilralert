@@ -13,7 +13,7 @@ const schema = yup.object().shape({
   password: yup
     .string()
     .required("Please enter your password")
-    .min(5, "The message must be at least 5 characters"),
+    .min(5, "The password must be at least 5 characters"),
 });
 
 export default function SignupForm() {
@@ -51,7 +51,12 @@ export default function SignupForm() {
       {errors.email && <span>{errors.email.message}</span>}
 
       <label htmlFor="password">Password:</label>
-      <input name="password" {...register("password")} placeholder="password" />
+      <input
+        type="password"
+        name="password"
+        {...register("password")}
+        placeholder="password"
+      />
       {errors.password && <span>{errors.password.message}</span>}
       {invalidSignUpState && (
         <div className="message">Username or email is already taken</div>

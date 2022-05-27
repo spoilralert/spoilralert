@@ -19,21 +19,23 @@ export default function Post({ spoilrs }) {
 
   return (
     <div className={`card ${expand ? "expand" : ""}`}>
-      <div className="div" onClick={handleToggle}>
-        <h4>{spoilrs.title}</h4>
-        <div className="card__info">
-          <h5>{username}</h5>
-          <h5>{spoilrs.createdAt}</h5>
-        </div>
-        <div className={`card__text ${expand ? "expand-text" : ""}`}>
-          <Paragraph text={spoilrs.content} />
-          <div className="tags__container">
-            {spoilrs.tags.data.map((tag) => (
-              <h5 key={tag.id} className="tag">
-                {tag.attributes.tag}
-              </h5>
-            ))}
+      <div className="card__content" onClick={handleToggle}>
+        <div>
+          <h4>{spoilrs.title}</h4>
+          <div className="card__info">
+            <h5>{username}</h5>
+            <h5>{spoilrs.createdAt}</h5>
           </div>
+          <div className={`card__text ${expand ? "expand-text" : ""}`}>
+            <Paragraph text={spoilrs.content} />
+          </div>
+        </div>
+        <div className="tags__container">
+          {spoilrs.tags.data.map((tag, i) => (
+            <h5 key={i} className="tag">
+              {tag.attributes.tag}
+            </h5>
+          ))}
         </div>
       </div>
 

@@ -10,8 +10,8 @@ const schema = yup.object().shape({
   title: yup.string().required("Please enter a title"),
   message: yup
     .string()
-    .required("Please enter your message")
-    .min(10, "The message must be at least 10 characters"),
+    .required("Please enter text")
+    .min(10, "The text must be at least 10 characters"),
 });
 
 export default function PostForm({ movieId, tags }) {

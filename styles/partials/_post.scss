@@ -9,6 +9,8 @@
         margin-top: 0;
     }
     height: 6rem;
+    // height: 4rem;
+    width: $width;
     overflow: hidden;
     transition: height ease-in-out 0.5s;
     display: flex;
@@ -17,14 +19,23 @@
     &:hover {
         cursor: pointer;
     }
-    .div {
+    .card__content {
         overflow: hidden;
     }
 }
-
+.card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80%;
+}
 .card__text {
     overflow: hidden;
     transition: height ease-in-out 1s;
+    p {
+        min-height: fit-content;
+    }
+    
 }
 
 .expand {
@@ -46,12 +57,13 @@
 .hidden {
     filter: blur(0.1rem);
  }
- .show {
+.show {
      filter: blur(0);
- }
+}
 
- .tags__container {
+.tags__container {
     display: flex;
+    overflow: hidden;
 }
 
 .tag {

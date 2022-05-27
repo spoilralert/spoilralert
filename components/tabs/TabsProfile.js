@@ -1,14 +1,18 @@
 import Post from "../Post";
 
-export default function TabsProfile() {
+export default function TabsProfile({ spoilrs }) {
   return (
     <div className="tabs container__layout">
-      <input type="radio" name="tabs" id="tabone" checked="checked" />
+      <input type="radio" name="tabs" id="tabone" defaultChecked={true} />
       <label htmlFor="tabone" className="tab__label">
         Added Spoilrs
       </label>
       <div className="tab">
-        <Post />
+        {spoilrs.map((spoilr) =>
+          spoilr.attributes.spoilrs.data.map((s) => (
+            <Post key={s.id} spoilrs={s.attributes} />
+          ))
+        )}
       </div>
 
       <input type="radio" name="tabs" id="tabtwo" />

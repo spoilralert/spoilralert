@@ -4,9 +4,21 @@ import PostForm from "../forms/PostForm";
 import Post from "../Post";
 // import { LoadSpoilrsForMovie } from "../../lib/strapi";
 import { AddSpoilrRequest } from "../../lib/spoilrs";
+import { useEffect } from "react";
+import { getUserId } from "../../lib/storage";
 
-export default function TabsSpoilrs({ spoilrs, movieId, tags }) {
+export default function TabsSpoilrs({ spoilrs, movie, movieId, tags }) {
   const [show, setShow] = useState(false);
+  const [userId, setUserId] = useState(null);
+
+  const [spoilrRequest, setSpoilrRequest] = useState(movie.spoilr_request.data);
+
+  useEffect(() => {
+    const userId = getUserId();
+    if (userId) {
+      setUserId(userId);
+    }
+  }, []);
 
   const handleShow = () => {
     setShow(!show);
@@ -21,22 +33,36 @@ export default function TabsSpoilrs({ spoilrs, movieId, tags }) {
     }
   };
 
+  const handleAddSpoilrRequest = async () => {
+    const result = await AddSpoilrRequest(movieId, userId);
+    setSpoilrRequest(result);
+    console.log(result);
+  };
+
   return (
     <div className="tabs container__layout">
-      <input type="radio" name="tabs" id="tabone" checked="checked" />
+      <input type="radio" name="tabs" id="tabone" defaultChecked={true} />
       <label htmlFor="tabone" className="tab__label">
         Spoilrs
       </label>
       <div className="tab">
-        {spoilrs.length === 0 && (
+        {spoilrs.length === 0 && !spoilrRequest && (
           <div className="request__cta">
             <h5>
               Oh no! There is no spoilrs added yet, do you want to make a
               request?
             </h5>
-            <button onClick={AddSpoilrRequest} className="tab__cta__btn">
+            <button onClick={handleAddSpoilrRequest} className="tab__cta__btn">
               Add Spoilr request
             </button>
+          </div>
+        )}
+        {spoilrs.length === 0 && spoilrRequest && (
+          <div className="request__cta">
+            <h5>
+              Oh no! There is no spoilrs added yet, but it has been requested.
+              Please check back later.
+            </h5>
           </div>
         )}
         {spoilrs.length > 0 && (
@@ -46,7 +72,7 @@ export default function TabsSpoilrs({ spoilrs, movieId, tags }) {
         )}
         <div className={show ? "show" : "hidden"}>
           {spoilrs.map((spoilr, i) => (
-            <Post key={i} spoilrs={spoilr.attributes} />
+            <Post key={i} postKey={i} spoilrs={spoilr.attributes} />
           ))}
         </div>
       </div>

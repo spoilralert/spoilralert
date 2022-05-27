@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Login } from "../../lib/auth";
 import { saveToken, saveUser } from "../../lib/storage";
 import { useState } from "react";
+import { useRouter } from "next/router";
 // import DisplayMessage from "../DisplayMessage";
 
 const schema = yup.object().shape({
@@ -19,6 +20,7 @@ const schema = yup.object().shape({
 
 export default function LoginForm() {
   const [invalidLoginState, setInvalidLoginState] = useState(false);
+  const router = useRouter();
 
   const {
     register,
@@ -38,7 +40,7 @@ export default function LoginForm() {
       saveToken(response.login.jwt);
       saveUser(response.login.user);
 
-      location.href = "/";
+      router.push("/");
     } catch (e) {
       console.log(e.message);
       setInvalidLoginState(true);
@@ -52,7 +54,12 @@ export default function LoginForm() {
       {errors.email && <span>{errors.email.message}</span>}
 
       <label htmlFor="password">Password:</label>
-      <input name="password" {...register("password")} placeholder="password" />
+      <input
+        type="password"
+        name="password"
+        {...register("password")}
+        placeholder="password"
+      />
       {errors.password && <span>{errors.password.message}</span>}
       {invalidLoginState && (
         <div className="message">Invalid email or password</div>
