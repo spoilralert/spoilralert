@@ -31,8 +31,8 @@
 }
 .card__text {
     overflow: hidden;
-    transition: height ease-in-out 0.5s;
-    // transition: height;
+    // transition: height ease-in-out 0.5s;
+    transition: height;
 
     // p {
     //     height: fit-content;
