@@ -11,7 +11,6 @@ export default function SearchResults({
   searchStarted,
   addMovieToStrapi,
 }) {
-  console.log(movies);
   return (
     <div className="search__results">
       {movies.length === 0 &&

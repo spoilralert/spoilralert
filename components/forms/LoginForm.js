@@ -5,7 +5,6 @@ import { Login } from "../../lib/auth";
 import { saveToken, saveUser } from "../../lib/storage";
 import { useState } from "react";
 import { useRouter } from "next/router";
-// import DisplayMessage from "../DisplayMessage";
 
 const schema = yup.object().shape({
   email: yup
@@ -31,18 +30,14 @@ export default function LoginForm() {
   });
 
   async function onSubmit(data) {
-    console.log(data);
-
     try {
       const response = await Login(data.email, data.password);
-      console.log(response);
 
       saveToken(response.login.jwt);
       saveUser(response.login.user);
 
       router.push("/");
     } catch (e) {
-      console.log(e.message);
       setInvalidLoginState(true);
     }
   }

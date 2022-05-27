@@ -15,9 +15,9 @@ export default function Header() {
           </a>
         </Link>
       </div>
-      <div className="header__search">
+      {/* <div className="header__search">
         <Search />
-      </div>
+      </div> */}
       <div className="header__nav">
         <HeaderNav />
         <HamburgerMenu />

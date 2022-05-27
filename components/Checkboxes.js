@@ -8,7 +8,7 @@ export default function Checkbox({ title, items, checked, handleCheck }) {
       <div className="checklist__container">
         {items.map((item, index) => (
           <div key={index} className="checklist__item">
-            <span className={isChecked(item.id)}>{item.attributes.tag}</span>
+            <span className={isChecked(item.id)}>{item.attributes.name}</span>
             <input value={item.id} type="checkbox" onChange={handleCheck} />
           </div>
         ))}

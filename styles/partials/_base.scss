@@ -35,3 +35,19 @@ section {
 .container__layout {
     width: $width;
 }
+
+
+a {
+    text-decoration: none;
+    padding: $padding;
+    transition: color 0.3s ease;
+    &:hover {
+        color: $secondary_50opacity;
+    }
+}
+
+.message {
+    color: $secondary;
+    font-size: clamp(0.2rem, 2vw, 0.4rem); 
+    padding: $padding;
+ }

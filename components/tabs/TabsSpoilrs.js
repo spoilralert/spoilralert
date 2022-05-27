@@ -36,7 +36,6 @@ export default function TabsSpoilrs({ spoilrs, movie, movieId, tags }) {
   const handleAddSpoilrRequest = async () => {
     const result = await AddSpoilrRequest(movieId, userId);
     setSpoilrRequest(result);
-    console.log(result);
   };
 
   return (
@@ -61,7 +60,7 @@ export default function TabsSpoilrs({ spoilrs, movie, movieId, tags }) {
           <div className="request__cta">
             <h5>
               Oh no! There is no spoilrs added yet, but it has been requested.
-              Please check back later.
+              Please check back later or help us out by adding one.
             </h5>
           </div>
         )}

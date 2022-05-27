@@ -73,6 +73,14 @@
     }
 }
 
+.icon {
+    color: $primary;
+    align-self: center;
+    padding: $padding;
+    font-size: clamp(0.8rem, 4vw, 1rem);
+}
+
+
 
 // --about & faq page--
 
@@ -85,7 +93,6 @@
         border-left: solid 1px $secondary;
     }
 }
-
 
 
 
@@ -116,4 +123,24 @@
         color: $lightgrey;
         margin-right: 0.5rem;
     }
+}
+
+.image__movie__poster {
+    box-shadow: $box-shadow;
+}
+
+.image__movie__banner {
+    margin-top: clamp(0.1rem, 2vw, 1rem);
+    display: flex;
+    justify-content: center;
+}
+
+
+
+// --profile page--
+
+.user__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -47,8 +47,6 @@ export default function PostForm({ movieId, tags }) {
   });
 
   function onSubmit(data) {
-    console.log(data);
-    console.log(checked);
     const response = AddSpoilr(
       movieId,
       data.title,
@@ -59,10 +57,7 @@ export default function PostForm({ movieId, tags }) {
     setChecked([]);
     setPostedMessage(true);
     reset();
-    console.log(response);
   }
-
-  console.log(errors);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

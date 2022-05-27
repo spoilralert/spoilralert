@@ -29,8 +29,6 @@ export default function Profile() {
 
   if (isLoading) return <Layout>Loading...</Layout>;
 
-  console.log(userSpoilrs);
-
   return (
     <Layout>
       <Head title="profile" />

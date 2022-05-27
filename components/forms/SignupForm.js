@@ -27,18 +27,13 @@ export default function SignupForm() {
   });
 
   async function onSubmit(data) {
-    console.log(data);
     try {
       const response = await Register(data.email, data.username, data.password);
-      console.log(response);
       location.href = "/login";
     } catch (error) {
-      console.log(error);
       setInvalidSignUpState(true);
     }
   }
-
-  console.log(errors);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

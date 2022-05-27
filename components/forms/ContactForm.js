@@ -35,8 +35,6 @@ export default function ContactForm() {
     reset();
   }
 
-  console.log(errors);
-
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor="name">Name:</label>

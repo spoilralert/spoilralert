@@ -5,11 +5,6 @@ import Paragraph from "./paragraph";
 import Vote from "./Vote";
 
 export default function Post({ spoilrs }) {
-  useEffect(() => {
-    spoilrs.tags.data.map((tag) => {
-      console.log(tag.attributes.tag);
-    });
-  });
   const [expand, setExpand] = useState(false);
   const username = spoilrs.user.data.attributes.username;
 
@@ -33,7 +28,7 @@ export default function Post({ spoilrs }) {
         <div className="tags__container">
           {spoilrs.tags.data.map((tag, i) => (
             <h5 key={i} className="tag">
-              {tag.attributes.tag}
+              {tag.attributes.name}
             </h5>
           ))}
         </div>

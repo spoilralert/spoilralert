@@ -4,7 +4,6 @@ import Link from "next/link";
 const resultsPosterUrl = "https://image.tmdb.org/t/p/w92";
 
 export default function RequestedResults({ movies }) {
-  console.log(movies);
   return (
     <div className="requested__results">
       {movies.map((movie, index) => (

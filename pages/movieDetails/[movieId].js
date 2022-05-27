@@ -16,8 +16,6 @@ export default function Details({ data, spoilrsData, movieId, tagsData }) {
   const poster = movie.poster_url;
   const spoilrs = spoilrsData.movie.data.attributes.spoilrs.data;
   const tags = tagsData.tags.data;
-  console.log("MOVIE");
-  console.log(movie);
 
   return (
     <Layout>

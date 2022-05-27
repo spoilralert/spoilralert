@@ -1,24 +1,33 @@
 import Checkbox from "../Checkboxes";
-import Link from "next/link";
 
-export default function AdvancedSearchForm() {
+export default function AdvancedSearchForm({
+  tags,
+  genres,
+  onSubmit,
+  handleCheckTags,
+  handleCheckGenres,
+  genreChecked,
+  tagChecked,
+}) {
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div className="checkbox__container">
         <Checkbox
-          title="Genre"
-          items={["Action", "Comedy", "Drama", "Horror"]}
+          title="Choose genre:"
+          items={genres}
+          checked={genreChecked}
+          handleCheck={handleCheckGenres}
         />
       </div>
       <div className="checkbox__container">
         <Checkbox
-          title="Tags"
-          items={["Bad", "LOL", "Surprising", "Gory", "Super"]}
+          title="Choose tag:"
+          items={tags}
+          checked={tagChecked}
+          handleCheck={handleCheckTags}
         />
       </div>
-      <button>
-        <Link href="/advancedSearchResults">Search</Link>
-      </button>
+      <button>Search</button>
     </form>
   );
 }

@@ -53,7 +53,6 @@ export default function Home() {
     if (value !== "") {
       const response = await SearchMovie(value);
       setMovieDbMovies(response.data.results);
-      console.log(movieDbMovies);
     } else {
       setMovieDbMovies([]);
     }
@@ -146,7 +145,7 @@ export default function Home() {
               <FontAwesomeIcon icon={faPlus} className="icon" />
               <Paragraph
                 text="-Is your desired title not in the search results? 
-              don't worry, you can make a request for spoilers by clicking the plus sign on the search box, find your title and make a spoiler request!"
+              don't worry, you can make a request for spoilers, just find your title and click the button on the movies detailspage!"
               />
             </div>
           </div>
