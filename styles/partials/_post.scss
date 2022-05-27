@@ -8,8 +8,8 @@
     h4 {
         margin-top: 0;
     }
-    height: 6rem;
-    // height: 4rem;
+    // height: 6rem;
+    height: 100%;
     width: $width;
     overflow: hidden;
     transition: height ease-in-out 0.5s;
@@ -32,25 +32,28 @@
 .card__text {
     overflow: hidden;
     transition: height ease-in-out 1s;
-    p {
-        min-height: fit-content;
-    }
-    
-}
-
-.expand {
-    height: 13rem;
-    // height: fit-content;
+    // p {
+    //     height: fit-content;
+    // }
+    height: 1.5rem;
 }
 
 .expand-text {
     height: fit-content;
 }
+
+// .expand {
+//     height: 13rem;
+//     height: 100%;
+// }
+
+
   
 .card__info {
     display: flex;
     h5 {
         padding-right: $padding;
+        color: $lightgrey;
     }
 }
 
@@ -68,6 +71,7 @@
 
 .tag {
     padding-right: $padding;
+    padding-bottom: $padding;
 }
 
 .vote__container {

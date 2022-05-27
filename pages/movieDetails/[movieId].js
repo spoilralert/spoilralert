@@ -44,7 +44,7 @@ export default function Details({ data, spoilrsData, movieId, tagsData }) {
               </div>
 
               <div>
-                <h5>Plot</h5>
+                <h4>Plot</h4>
                 <Paragraph text={movie.synopsis} />
               </div>
             </div>
