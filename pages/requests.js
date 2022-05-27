@@ -15,7 +15,7 @@ export default function Requests({ spoilrRequests }) {
       <main>
         <section>
           <div>
-            <Heading title="requests" />
+            <Heading title="Requests" />
             <RequestedResults movies={movies} />
           </div>
         </section>
