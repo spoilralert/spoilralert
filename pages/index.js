@@ -136,7 +136,7 @@ export default function Home() {
                 // style={{ fontSize: 50 }}
                 className="icon"
               />
-              <Paragraph text="-search for movie title to get details, then you can choose if you want to see the spoilers or not ;)" />
+              <Paragraph text="-Search for movie title to get details, then you can choose if you want to see the spoilers or not ;)" />
             </div>
           </div>
 
@@ -158,7 +158,7 @@ export default function Home() {
               <Paragraph
                 text="-By creating an account you agree to sell your soul to us, no of course not. 
                   By creating an account you get to add spoilrs, rate other spoilrs and be part of our happy farm. 
-                  All accounts are private and no user information is shared except username and avatar."
+                  All accounts are private and no user information is shared except username."
               />
             </div>
           </div>
