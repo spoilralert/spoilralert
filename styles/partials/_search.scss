@@ -70,12 +70,25 @@
         margin: 0;
     }
 }
+.requested_results {
+    width: min(30ch, calc(100vw - 2rem));
+    // position: absolute;
+    background-color: $primary;
+    height: fit-content;
+    color: black;
+    transition: height ease-in-out 0.5s;
+    padding-left: $padding;
+    a {
+        padding: 0;
+        margin: 0;
+    }
+}
 
-.search__item {
+.results__item {
     display: flex;
     margin-bottom: 0.5rem;
     
-    .search__description {
+    .results__description {
     padding-left: $padding;
     }
     &:hover {

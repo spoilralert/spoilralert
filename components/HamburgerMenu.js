@@ -36,7 +36,7 @@ export default function HamburgerMenu() {
               <Link href="/profile">Profile</Link>
             </li>
             <li>
-              <button className="logOut" onClick={LogOut}>
+              <button className="logout-btn" onClick={LogOut}>
                 Log out
               </button>
             </li>

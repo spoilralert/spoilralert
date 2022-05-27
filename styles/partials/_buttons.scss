@@ -30,6 +30,7 @@ button {
 
 .logout-btn {
     background-color: transparent;
+    color: $secondary;
     padding: $padding;
     transition: color 0.3s ease;
     align-self: flex-start;

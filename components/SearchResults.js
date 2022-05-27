@@ -28,14 +28,14 @@ export default function SearchResults({
       {movies.map((movie, index) => (
         <Link key={index} href={`/movieDetails/${movie.id}`} passHref>
           <a>
-            <div className="search__item">
+            <div className="results__item">
               <Image
                 src={searchPosterUrl + movie.attributes.poster_url}
                 width="70"
                 height="100"
                 alt="placeholder"
               />
-              <div className="search__description">
+              <div className="results__description">
                 <h5 key={index}>{movie.attributes.title}</h5>
                 <h5>{movie.attributes.release_date}</h5>
               </div>
@@ -48,7 +48,7 @@ export default function SearchResults({
           key={movie.id}
           onClick={addMovieToStrapi}
           data-key={movie.id}
-          className="search__item"
+          className="results__item"
         >
           <Image
             src={searchPosterUrl + movie.poster_path}
@@ -57,7 +57,7 @@ export default function SearchResults({
             alt="placeholder"
             data-key={movie.id}
           />
-          <div data-key={movie.id} className="search__description">
+          <div data-key={movie.id} className="results__description">
             <h5 data-key={movie.id}>{movie.original_title}</h5>
             <h5 data-key={movie.id}>{movie.release_date}</h5>
           </div>

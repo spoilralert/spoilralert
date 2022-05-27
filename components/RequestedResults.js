@@ -6,7 +6,7 @@ const resultsPosterUrl = "https://image.tmdb.org/t/p/w92";
 export default function RequestedResults({ movies }) {
   console.log(movies);
   return (
-    <div className="search__results">
+    <div className="requested__results">
       {movies.map((movie, index) => (
         <Link
           key={index}
@@ -14,7 +14,7 @@ export default function RequestedResults({ movies }) {
           passHref
         >
           <a>
-            <div className="search__item">
+            <div className="results__item">
               <Image
                 src={
                   resultsPosterUrl +
@@ -24,7 +24,7 @@ export default function RequestedResults({ movies }) {
                 height="100"
                 alt="placeholder"
               />
-              <div className="search__description">
+              <div className="results__description">
                 <h5 key={index}>
                   {movie.attributes.movie.data.attributes.title}
                 </h5>
