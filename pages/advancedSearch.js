@@ -13,7 +13,7 @@ export default function AdvancedSearch() {
         <section>
           <div>
             <Heading title="Advanced search" />
-            <AdvancedSearchForm />
+            {/* <AdvancedSearchForm /> */}
           </div>
         </section>
       </main>
