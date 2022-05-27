@@ -12,7 +12,7 @@
     height: 100%;
     width: $width;
     overflow: hidden;
-    transition: height ease-in-out 0.5s;
+    // transition: height ease-in-out 0.5s;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -31,7 +31,7 @@
 }
 .card__text {
     overflow: hidden;
-    transition: height ease-in-out 1s;
+    transition: height ease 0.5s;
     // p {
     //     height: fit-content;
     // }
