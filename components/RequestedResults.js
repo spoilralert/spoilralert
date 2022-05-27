@@ -22,7 +22,7 @@ export default function RequestedResults({ movies }) {
                 }
                 width="70"
                 height="100"
-                alt="placeholder"
+                alt={movie.attributes.movie.data.attributes.title}
               />
               <div className="results__description">
                 <h5 key={index}>

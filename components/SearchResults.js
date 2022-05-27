@@ -33,7 +33,7 @@ export default function SearchResults({
                 src={searchPosterUrl + movie.attributes.poster_url}
                 width="70"
                 height="100"
-                alt="placeholder"
+                alt={movie.attributes.title}
               />
               <div className="results__description">
                 <h5 key={index}>{movie.attributes.title}</h5>
@@ -54,7 +54,7 @@ export default function SearchResults({
             src={searchPosterUrl + movie.poster_path}
             width="70"
             height="100"
-            alt="placeholder"
+            alt={movie.original_title}
             data-key={movie.id}
           />
           <div data-key={movie.id} className="results__description">

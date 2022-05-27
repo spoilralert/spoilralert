@@ -81,7 +81,16 @@ export default function TabsSpoilrs({ spoilrs, movie, movieId, tags }) {
         Add spoilr
       </label>
       <div className="tab">
-        <PostForm movieId={movieId} tags={tags} />
+        {userId && (
+          <div>
+            <PostForm movieId={movieId} tags={tags} />
+          </div>
+        )}
+        {userId === null && (
+          <div className="message">
+            <h5>You need to log in to add spoilrs</h5>
+          </div>
+        )}
       </div>
     </div>
   );
