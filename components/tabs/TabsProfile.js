@@ -10,7 +10,7 @@ export default function TabsProfile({ spoilrs }) {
       <div className="tab">
         {spoilrs.map((spoilr) =>
           spoilr.attributes.spoilrs.data.map((s) => (
-            <Post key={s.id} spoilrs={s.attributes} />
+            <Post key={s.id} spoilr={s} />
           ))
         )}
       </div>

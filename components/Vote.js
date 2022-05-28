@@ -2,49 +2,47 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
-export default function Vote({ spoilrs }) {
-  const votes = spoilrs.votes;
-  const [count, setCount] = useState(votes);
+export default function Vote({ votes, handleVote}) {
   const [upVoted, setUpVoted] = useState(false);
   const [downVoted, setDownVoted] = useState(false);
 
-  const handleUpVote = () => {
+  const handleUpVote = async () => {
     const upVoteButton = document.querySelector(".upvote-btn");
     const downVoteButton = document.querySelector(".downvote-btn");
 
     if (!upVoted && !downVoted) {
-      setCount((count += 1));
+      await handleVote((votes += 1));
       setUpVoted(!upVoted);
       upVoteButton.classList.add("upvoted");
     } else if (!upVoted && downVoted) {
-      setCount((count += 2));
+      await handleVote((votes += 2));
       setUpVoted(!upVoted);
       setDownVoted(!downVoted);
       upVoteButton.classList.add("upvoted");
       downVoteButton.classList.remove("downvoted");
     } else {
-      setCount((count -= 1));
+      await handleVote((votes -= 1));
       setUpVoted(!upVoted);
       upVoteButton.classList.remove("upvoted");
     }
   };
 
-  const handleDownVote = () => {
+  const handleDownVote = async () => {
     const upVoteButton = document.querySelector(".upvote-btn");
     const downVoteButton = document.querySelector(".downvote-btn");
 
     if (!upVoted && !downVoted) {
-      setCount((count -= 1));
+      await handleVote((votes -= 1));
       setDownVoted(!downVoted);
       downVoteButton.classList.add("downvoted");
     } else if (!downVoted && upVoted) {
-      setCount((count -= 2));
+      await handleVote((votes -= 2));
       setDownVoted(!downVoted);
       setUpVoted(!upVoted);
       upVoteButton.classList.remove("upvoted");
       downVoteButton.classList.add("downvoted");
     } else {
-      setCount((count += 1));
+      await handleVote((votes += 1));
       setDownVoted(!downVoted);
       downVoteButton.classList.remove("downvoted");
     }
@@ -58,7 +56,7 @@ export default function Vote({ spoilrs }) {
       <button className="vote downvote-btn" onClick={handleDownVote}>
         <FontAwesomeIcon icon={faArrowDown} className="vote-icon" />
       </button>
-      <h5>{count}</h5>
+      <h5>{votes}</h5>
     </div>
   );
 }

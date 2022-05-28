@@ -71,7 +71,7 @@ export default function TabsSpoilrs({ spoilrs, movie, movieId, tags }) {
         )}
         <div className={show ? "show" : "hidden"}>
           {spoilrs.map((spoilr, i) => (
-            <Post key={i} postKey={i} spoilrs={spoilr.attributes} />
+            <Post key={i} postKey={i} spoilr={spoilr} />
           ))}
         </div>
       </div>
