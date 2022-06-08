@@ -27,27 +27,43 @@ export default function Details({ data, spoilrsData, movieId, tagsData }) {
         </div>
 
         <section>
-          <div className="container__layout movie">
-            <div className="image__movie__poster">
-              <Image src={poster} width="200" height="300" alt="placeholder" />
-            </div>
-
-            <div className="container__movie__details">
-              <Heading title={movie.title} />
-              <div className="container__movie__details__info">
-                <h5>{movie.release_date}</h5>
-                {movie.genre1 !== "undefined" && <h5>{movie.genre1}</h5>}
-                {movie.genre2 !== "undefined" && <h5>{movie.genre2}</h5>}
-                {movie.genre3 !== "undefined" && <h5>{movie.genre3}</h5>}
+          <div className="container__layout">
+            <div className="movie">
+              <div className="image__movie__poster">
+                <Image
+                  src={poster}
+                  width="200"
+                  height="300"
+                  alt="placeholder"
+                />
               </div>
 
-              <div>
+              <div className="container__movie__details">
+                <Heading title={movie.title} />
+                <div className="container__movie__details__info">
+                  <h5>{movie.release_date}</h5>
+                  {movie.genre1 !== "undefined" && <h5>{movie.genre1}</h5>}
+                  {movie.genre2 !== "undefined" && <h5>{movie.genre2}</h5>}
+                  {movie.genre3 !== "undefined" && <h5>{movie.genre3}</h5>}
+                </div>
+                {/* <div>
                 <h4>Plot</h4>
                 <Paragraph text={movie.synopsis} />
+              </div> */}
               </div>
             </div>
+
+            <div className="movie__plot">
+              <h4>Plot</h4>
+              <Paragraph text={movie.synopsis} />
+            </div>
           </div>
+          {/* <div>
+            <h4>Plot</h4>
+            <Paragraph text={movie.synopsis} />
+          </div> */}
         </section>
+
         <section>
           <TabsSpoilrs
             spoilrs={spoilrs}

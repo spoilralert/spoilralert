@@ -5,7 +5,7 @@ import { faSearch, faPlus } from "@fortawesome/free-solid-svg-icons";
 export default function Search(props) {
   return (
     <div className="searchbox" style={props.style}>
-      <label htmlFor="search">search for spoilrs</label>
+      <label htmlFor="search">Search for spoilrs</label>
       <div>
         {/* <button type="submit" className="search-btn">
           <FontAwesomeIcon icon={faPlus} className="search-icon" />
@@ -13,7 +13,7 @@ export default function Search(props) {
         <input
           name="search"
           type="text"
-          placeholder="film title"
+          placeholder="Film Title"
           onChange={props.handleChange}
         />
         <button type="submit" className="search-btn">
