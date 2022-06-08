@@ -109,7 +109,8 @@
 .container__movie__details {
     margin-top: 1rem;
     padding: $padding;
-    width: min(30ch, calc(100vw - 2rem));
+    // width: min(30ch, calc(100vw - 2rem));
+    width: min(800px, 100vw);
 }
 .container__movie__details__info {
     display: flex;
