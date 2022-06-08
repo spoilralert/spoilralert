@@ -23,7 +23,7 @@ export default function Details({ data, spoilrsData, movieId, tagsData }) {
       <Header />
       <main>
         <div className="image__movie__banner">
-          <Image src={banner} width="800" height="400" alt="placeholder" />
+          <Image src={banner} width="950" height="550" alt="placeholder" />
         </div>
 
         <section>
@@ -46,10 +46,6 @@ export default function Details({ data, spoilrsData, movieId, tagsData }) {
                   {movie.genre2 !== "undefined" && <h5>{movie.genre2}</h5>}
                   {movie.genre3 !== "undefined" && <h5>{movie.genre3}</h5>}
                 </div>
-                {/* <div>
-                <h4>Plot</h4>
-                <Paragraph text={movie.synopsis} />
-              </div> */}
               </div>
             </div>
 
