@@ -119,7 +119,7 @@ export default function Home() {
               {/* <h3>-discuss movies with other peerse</h3> */}
             </div>
             <button>
-              <Link href="/requests">View Requested spoilrs</Link>
+              <Link href="/requests">Requested spoilrs</Link>
             </button>
           </div>
         </section>
