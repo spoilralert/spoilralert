@@ -10,7 +10,8 @@ button {
     // padding: 10px 100px;
     padding: clamp(0.1rem, 2vw, 0.4rem);
     padding: 0.5rem 1rem;
-    transition: box-shadow 0.1s ease-in;
+    box-shadow: $box-shadow-grey;
+    // transition: box-shadow 0.1s ease-in;
     a {
         color: $primary;
         &:hover {
@@ -23,6 +24,7 @@ button {
     }
     &:active {
         background-color: $secondary_50opacity;
+        box-shadow: $secondary;
     }
 }
 
