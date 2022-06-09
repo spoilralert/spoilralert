@@ -35,10 +35,14 @@ h5 {
     margin: 0;
 }
 
-p, input, textarea, span, .message {
+p, span, .message {
     // font-size: clamp(0.4rem, 2vw, 0.5rem);
     font-size: clamp(0.5rem, 2vw, 0.6rem);
     line-height: 1.5;
+}
+
+input, textarea {
+    font-size: 16px;
 }
 
 a, .tab__label, .logout-btn {
