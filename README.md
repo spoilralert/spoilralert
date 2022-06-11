@@ -25,5 +25,12 @@ This is a movie db site with user added spoilers. Users can search for a specifi
 - Next.js
 - Sass
 
+## Getting started
+
+1. Clone the repo: 
+
+
+2. Install independencies:
+npm install
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
