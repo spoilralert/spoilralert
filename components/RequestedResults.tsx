@@ -3,7 +3,26 @@ import Link from "next/link";
 
 const resultsPosterUrl = "https://image.tmdb.org/t/p/w92";
 
-export default function RequestedResults({ movies }) {
+interface Movie {
+  attributes: { 
+    movie: {
+      data: {
+        id: number;
+        attributes: {
+          poster_url: string;
+          title: string;
+          release_date: string;
+        }
+      }
+    }
+  }
+}
+
+interface Props {
+  movies: Array<Movie>;
+}
+
+export default function RequestedResults({ movies }: Props) {
   return (
     <div className="requested__results">
       {movies.map((movie, index) => (
