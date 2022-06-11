@@ -14,6 +14,12 @@ This is a movie db site with user added spoilers. Users can search for a specifi
 
 ## Description
 
+- Find spoilers for specific movietitle
+- Add spoilers
+- Request spoilers
+- Rate spoilers
+- Profile page listing personally added spoilrs
+
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
