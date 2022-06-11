@@ -2,13 +2,18 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
-export default function Vote({ votes, handleVote}) {
+interface voteProps {
+  votes: number;
+  handleVote: (newSum: number) => Promise<number>;
+}
+
+export default function Vote({ votes, handleVote} : voteProps) {
   const [upVoted, setUpVoted] = useState(false);
   const [downVoted, setDownVoted] = useState(false);
 
   const handleUpVote = async () => {
-    const upVoteButton = document.querySelector(".upvote-btn");
-    const downVoteButton = document.querySelector(".downvote-btn");
+    const upVoteButton: HTMLButtonElement = document.querySelector(".upvote-btn") as HTMLButtonElement;
+    const downVoteButton: HTMLButtonElement = document.querySelector(".downvote-btn") as HTMLButtonElement;
 
     if (!upVoted && !downVoted) {
       await handleVote((votes += 1));
@@ -28,8 +33,8 @@ export default function Vote({ votes, handleVote}) {
   };
 
   const handleDownVote = async () => {
-    const upVoteButton = document.querySelector(".upvote-btn");
-    const downVoteButton = document.querySelector(".downvote-btn");
+    const upVoteButton: HTMLButtonElement = document.querySelector(".upvote-btn") as HTMLButtonElement;
+    const downVoteButton: HTMLButtonElement = document.querySelector(".downvote-btn") as HTMLButtonElement;
 
     if (!upVoted && !downVoted) {
       await handleVote((votes -= 1));
