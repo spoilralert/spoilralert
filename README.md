@@ -28,7 +28,7 @@ This is a movie db site with user added spoilers. Users can search for a specifi
 ## Getting started
 
 1. Clone the repo: 
-`code`
+``
 
 2. Install independencies:
 `npm install`
