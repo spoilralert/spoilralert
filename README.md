@@ -33,4 +33,7 @@ This is a movie db site with user added spoilers. Users can search for a specifi
 2. Install independencies:
 npm install
 
+`code`
+> blockquote
+
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
