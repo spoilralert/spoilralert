@@ -3,6 +3,32 @@ import Link from "next/link";
 
 const searchPosterUrl = "https://image.tmdb.org/t/p/w92";
 
+interface movie {
+  id: number;
+    attributes: {
+      title: string;
+      poster_url: string;
+      release_date: string;
+      synopsis: string;
+    }
+}
+
+interface movieDbMovie {
+  id: number;
+  poster_path: string;
+  original_title: string;
+  release_date: string;
+}
+
+interface SearchProps {
+  movies: Array<movie>;
+  movieDbMovies: Array<movieDbMovie>;
+  searchMovieDb: () => Promise<void>;
+  searchValue: string;
+  searchStarted: boolean;
+  addMovieToStrapi: (e: React.MouseEvent) => Promise<void>
+}
+
 export default function SearchResults({
   movies,
   searchMovieDb,
@@ -10,7 +36,7 @@ export default function SearchResults({
   searchValue,
   searchStarted,
   addMovieToStrapi,
-}) {
+} : SearchProps) {
   return (
     <div className="search__results">
       {movies.length === 0 &&
@@ -24,7 +50,7 @@ export default function SearchResults({
             </div>
           </div>
         )}
-      {movies.map((movie, index) => (
+      {movies.map((movie, index: number) => (
         <Link key={index} href={`/movieDetails/${movie.id}`} passHref>
           <a>
             <div className="results__item">
