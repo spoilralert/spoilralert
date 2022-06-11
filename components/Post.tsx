@@ -4,7 +4,37 @@ import {UpdateSpoilrVotes} from "../lib/spoilrs";
 import Paragraph from "./paragraph";
 import Vote from "./Vote";
 
-export default function Post({ spoilr }) {
+interface Spoilr {
+  id: number;
+  attributes: {
+    votes: number;
+    title: string;
+    createdAt: string;
+    content: string;
+    tags: {
+      data: [
+        tag: {
+          attributes: {
+            name: string;
+          }
+        }
+      ]
+    }
+    user: {
+      data: {
+        attributes: {
+          username: string;
+        }
+      }
+    }
+  }
+}
+
+interface Props {
+  spoilr: Spoilr;
+}
+
+export default function Post({ spoilr }: Props) {
   const [expand, setExpand] = useState(false);
   const [votes, setVotes] = useState(spoilr.attributes.votes);
   const username = spoilr.attributes.user.data.attributes.username;
@@ -13,7 +43,7 @@ export default function Post({ spoilr }) {
     setExpand(!expand);
   };
 
-  const handleVote = async (newSum) => {
+  const handleVote = async (newSum: number) => {
     setVotes(newSum);
     const data = await UpdateSpoilrVotes(spoilr.id, newSum);
   }

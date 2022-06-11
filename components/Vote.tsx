@@ -4,7 +4,7 @@ import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 interface voteProps {
   votes: number;
-  handleVote: (newSum: number) => Promise<number>;
+  handleVote: (newSum: number) => Promise<void>;
 }
 
 export default function Vote({ votes, handleVote} : voteProps) {
