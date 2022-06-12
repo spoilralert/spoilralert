@@ -41,5 +41,5 @@ In this project I collaborated with an experienced developer who helped with bui
 
 ## Live site
 
-[Spoilralertpage](https://dev--spoilralert.netlify.app) (under development)
+[Spoilralert page](https://dev--spoilralert.netlify.app) (under development)
 
