@@ -53,7 +53,8 @@
 }
 
 .search__results {
-    width: min(30ch, calc(100vw - 2rem));
+    // width: min(30ch, calc(100vw - 2rem));
+    width: min(600px, 95vw);
     position: absolute;
     background-color: $primary;
     height: fit-content;
@@ -66,7 +67,8 @@
     }
 }
 .requested_results {
-    width: min(30ch, calc(100vw - 2rem));
+    // width: min(30ch, calc(100vw - 2rem));
+    width: min(600px, 95vw);
     background-color: $primary;
     height: fit-content;
     color: black;
@@ -81,6 +83,7 @@
 .results__item {
     display: flex;
     margin-bottom: 0.5rem;
+    padding: 0.1rem;
     
     .results__description {
     padding-left: $padding;
