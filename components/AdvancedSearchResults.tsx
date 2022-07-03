@@ -1,9 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import { string } from "yup";
 
 const resultsPosterUrl = "https://image.tmdb.org/t/p/w92";
 
-export default function AdvancedSearchResults({ movies }) {
+interface Movie {
+  id: number;
+  attributes: {
+    title: string;
+    release_date: string;
+    poster_url: string;
+    synopsis: string;
+  }
+}
+
+interface Props {
+  movies: Movie[];
+}
+
+export default function AdvancedSearchResults({ movies }: Props) {
   return (
     <div className="requested__results">
       {movies.map((movie, index) => (

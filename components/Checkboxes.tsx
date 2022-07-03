@@ -1,5 +1,15 @@
-export default function Checkbox({ title, items, checked, handleCheck }) {
-  let isChecked = (item) =>
+import React from "react";
+import { Tags } from "./ts/MovieTypes";
+
+interface Props {
+  title: string;
+  items: Tags[];
+  checked: Array<number>;
+  handleCheck: (e: React.ChangeEvent) => Promise<void>
+}
+
+export default function Checkbox({ title, items, checked, handleCheck }: Props) {
+  let isChecked = (item: number) =>
     checked.includes(item) ? "checked-item" : "not-checked-item";
 
   return (
