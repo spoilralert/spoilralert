@@ -36,6 +36,8 @@ button {
     background-color: transparent;
     color: $secondary;
     padding: $padding;
+    box-shadow: none;
+    font-weight: 400;
     transition: color 0.3s ease;
     align-self: flex-start;
 
