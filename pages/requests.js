@@ -16,7 +16,9 @@ export default function Requests({ spoilrRequests }) {
         <section>
           <div>
             <Heading title="Requests" />
-            <RequestedResults movies={movies} />
+            <div className="requests__container">
+              <RequestedResults movies={movies} />
+            </div>
           </div>
         </section>
       </main>

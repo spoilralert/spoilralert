@@ -66,12 +66,13 @@
         margin: 0;
     }
 }
-.requested_results {
+.requested__results {
     // width: min(30ch, calc(100vw - 2rem));
-    width: min(600px, 95vw);
-    background-color: $primary;
+    // width: min(600px, 95vw);
+    // background-color: blue;
+    // background-color: $primary;
     height: fit-content;
-    color: black;
+    // color: black;
     transition: height ease-in-out 0.5s;
     padding-left: $padding;
     a {
@@ -81,15 +82,30 @@
 }
 
 .results__item {
+    background-color: $primary;
     display: flex;
     margin-bottom: 0.5rem;
-    padding: 0.1rem;
+    // padding: 0.1rem;
+    transition: background-color 0.5s;
+    h5 {
+        color: $white;
+        transition: color 0.5s;
+    }
+    
     
     .results__description {
     padding-left: $padding;
     }
+
+    // &:hover {
+    //     cursor: pointer;
+    //     background-color: $darkgrey_20opacity;
+    // }
     &:hover {
         cursor: pointer;
+        h5 {
+            color: $secondary;
+        }   
     }
 }
 
