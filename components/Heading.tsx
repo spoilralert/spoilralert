@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
 
-export default function Heading({ title }) {
+interface Props {
+  title: string;
+}
+export default function Heading({ title }: Props) {
   return <h1>{title}</h1>;
 }
 

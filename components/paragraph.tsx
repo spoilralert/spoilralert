@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
 
-export default function Paragraph({ text }) {
+interface Props {
+  text: string;
+}
+
+export default function Paragraph({ text }: Props) {
   return <p>{text}</p>;
 }
 
