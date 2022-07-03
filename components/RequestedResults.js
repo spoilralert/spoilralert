@@ -14,15 +14,18 @@ export default function RequestedResults({ movies }) {
         >
           <a>
             <div className="results__item">
-              <Image
-                src={
-                  resultsPosterUrl +
-                  movie.attributes.movie.data.attributes.poster_url
-                }
-                width="70"
-                height="100"
-                alt={movie.attributes.movie.data.attributes.title}
-              />
+              <div className="image__movie__search image__movie__poster">
+                <Image
+                  src={
+                    resultsPosterUrl +
+                    movie.attributes.movie.data.attributes.poster_url
+                  }
+                  width="200"
+                  height="300"
+                  alt={movie.attributes.movie.data.attributes.title}
+                />
+              </div>
+
               <div className="results__description">
                 <h5 key={index}>
                   {movie.attributes.movie.data.attributes.title}

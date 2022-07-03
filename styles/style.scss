@@ -16,6 +16,17 @@
 @import "partials/footer";
 
 
+.requests__container {
+    padding-left: 1rem;
+    border-left: solid 1px $secondary;
+    width: min(600px, 90vw);
+}
+
+.image__movie__search {
+    width: clamp(100px, 10vw, 120px);
+}
+
+
 
 
 
