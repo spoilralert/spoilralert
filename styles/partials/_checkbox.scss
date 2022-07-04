@@ -10,9 +10,12 @@
     width: 95%;
 }
 .checklist__container {
+    height: 400px;
     border-left: solid 1px $secondary;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    // justify-content: space-between;
 }
 
 .checked-item {
