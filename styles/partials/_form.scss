@@ -1,6 +1,7 @@
 form {
     background-color: $darkgrey_20opacity;
     width: min(30ch, calc(100vw - 2rem));
+    width: $width;
     border-radius: $border-radius;
     padding: $padding;
     label {
