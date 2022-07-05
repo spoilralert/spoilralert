@@ -82,7 +82,7 @@ export default function PostForm({ movieId, tags }) {
       </div>
       {postedMessage && (
         <div className="message">
-          Yeay! Your spoilr has been added, +1 point for you!
+          Cock a doodle do! Your spoilr has been added, +1 point for you!
         </div>
       )}
       <button>Post</button>
