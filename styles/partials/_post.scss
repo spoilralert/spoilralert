@@ -7,8 +7,6 @@
     h4 {
         margin-top: 0;
     }
-    // height: 6rem;
-    // height: 100%;
     width: $width;
     overflow: hidden;
     // transition: height ease-in-out 0.5s;
@@ -21,6 +19,15 @@
     // .card__content {
     //     overflow: hidden;
     // }
+}
+.card__heading {
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    
+    .delete-icon {
+        font-size: 14px;
+    }
 }
 .card__content {
     display: flex;
