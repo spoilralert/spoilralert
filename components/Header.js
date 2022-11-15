@@ -5,6 +5,7 @@ import LogoIcon from "../public/images/rooster_icon1.png";
 import Search from "./Search";
 import HamburgerMenu from "./HamburgerMenu";
 import Link from "next/link";
+import Logo from "../public/images/logo_icon.svg";
 
 export default function Header() {
   return (
@@ -12,12 +13,13 @@ export default function Header() {
       <div className="header__logo">
         <Link href="/">
           <a className="header__logo__link">
-            <Image
+            <Logo id="header__logo" />
+            {/* <Image
               src={LogoIcon}
               width="62"
               height="50"
               alt="spoilralert logo"
-            />
+            /> */}
           </a>
         </Link>
       </div>

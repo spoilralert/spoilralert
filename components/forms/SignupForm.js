@@ -13,11 +13,13 @@ const schema = yup.object().shape({
   password: yup
     .string()
     .required("Please enter your password")
-    .min(5, "The password must be at least 5 characters"),
+    .min(5, "The password must be at least 6 characters"),
 });
 
 export default function SignupForm() {
+  // let message = "";
   const [invalidSignUpState, setInvalidSignUpState] = useState(false);
+  const [message, setMessage] = useState("");
   const {
     register,
     handleSubmit,
@@ -26,17 +28,25 @@ export default function SignupForm() {
     resolver: yupResolver(schema),
   });
 
-  async function onSubmit(data) {
+  async function onSubmit(data, e) {
+    e.preventDefault();
+    e.target.reset();
     try {
       const response = await Register(data.email, data.username, data.password);
-      location.href = "/login";
+      // location.href = "/login";
+      setMessage(
+        "Hooray! Thank you for signing up to spoilralert! You will soon receve an email when we are up and running with beta"
+      );
     } catch (error) {
-      setInvalidSignUpState(true);
+      // setInvalidSignUpState(true);
+      setMessage(
+        "oh no! The username or email is already taken, please try another one"
+      );
     }
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form id="form" onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor="username">Username:</label>
       <input name="username" {...register("username")} placeholder="Username" />
       {errors.username && <span>{errors.username.message}</span>}
@@ -53,9 +63,14 @@ export default function SignupForm() {
         placeholder="password"
       />
       {errors.password && <span>{errors.password.message}</span>}
-      {invalidSignUpState && (
-        <div className="message">Username or email is already taken</div>
-      )}
+
+      {/* {invalidSignUpState && (
+        // <div className="message">Username or email is already taken</div>
+        <div>{message}</div>
+      )} */}
+
+      <div>{message}</div>
+
       <button>Sign Up</button>
     </form>
   );

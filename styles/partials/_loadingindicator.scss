@@ -1,0 +1,22 @@
+.container__loading__rooster {
+    width: min(200px, 30vw);
+}
+
+#loading__rooster {
+    background-color: transparent;
+    width: 100%;
+    animation: opacity 3s ease-in-out infinite;
+
+    path {
+        fill: white;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

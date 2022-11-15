@@ -10,6 +10,7 @@ import Search from "../components/Search";
 import SearchResults from "../components/SearchResults";
 import Link from "next/link";
 import debounce from "lodash.debounce";
+import Placeholder from "../components/placeholder";
 import { SearchMovies } from "../lib/movies";
 import { useState } from "react";
 import { SearchMovie } from "../lib/movieDB";
@@ -77,14 +78,15 @@ export default function Home() {
   return (
     <Layout>
       <Head title="Home" />
-      <div className="header__nav">
+      {/* <div className="header__nav">
         <HeaderNav />
         <HamburgerMenu />
-      </div>
+      </div> */}
       <main>
         <div className="bg-text">spoilralert</div>
         <section>
-          <div className="logo-search__container">
+          <Placeholder />
+          {/* <div className="logo-search__container">
             <Image
               src={Logo}
               width="200"
@@ -106,7 +108,7 @@ export default function Home() {
                 addMovieToStrapi={addMovieToStrapi}
               />
             </div>
-          </div>
+          </div> */}
         </section>
 
         <section>
@@ -118,9 +120,9 @@ export default function Home() {
               <h3>-Climb our spoilr hierarchy</h3>
               {/* <h3>-discuss movies with other peerse</h3> */}
             </div>
-            <button>
+            {/* <button>
               <Link href="/requests">View Requested Spoilrs</Link>
-            </button>
+            </button> */}
           </div>
         </section>
 
@@ -168,7 +170,7 @@ export default function Home() {
               <FontAwesomeIcon icon={faStar} className="icon" />
               <Paragraph
                 text="-Want to add spoilers? You are now our best friend! 
-                Just find a title and get to it my friend! 
+                Just find a title and get to it! 
                 Or why not check out our list of spoiler requests to see if you can help someone out. 
                 For every spoiler added, you get a shiny point. For every upvote; you guessed it -point! 
                 Share your movie knowledge with us and welcome to the spoilr family!"

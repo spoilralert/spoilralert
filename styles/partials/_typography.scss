@@ -15,6 +15,7 @@ h1 {
     font-size: clamp(0.8rem, 3vw, 1.2rem);
     padding: $padding 0;
     margin: 0;
+    letter-spacing: 2px;
 }
 h2 {
     // font-size: 30px;
@@ -31,7 +32,7 @@ h4 {
 }
 
 h5 {
-    font-size: clamp(0.3rem, 3vw, 0.4rem);
+    // font-size: clamp(0.3rem, 3vw, 0.4rem);
     font-size: clamp(0.4rem, 2vw, 0.6rem);
     margin: 0;
 }
@@ -40,6 +41,8 @@ p, span, .message {
     // font-size: clamp(0.4rem, 2vw, 0.5rem);
     font-size: clamp(0.5rem, 1vw, 0.6rem);
     line-height: 1.5;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 input, textarea {

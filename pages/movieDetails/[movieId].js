@@ -19,7 +19,7 @@ export default function Details({ data, spoilrsData, movieId, tagsData }) {
 
   return (
     <Layout>
-      <Head title="movie title" />
+      <Head title={movie.title} />
       <Header />
       <main>
         <div className="image__movie__banner">
