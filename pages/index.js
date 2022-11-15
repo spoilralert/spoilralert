@@ -78,15 +78,15 @@ export default function Home() {
   return (
     <Layout>
       <Head title="Home" />
-      {/* <div className="header__nav">
+      <div className="header__nav">
         <HeaderNav />
         <HamburgerMenu />
-      </div> */}
+      </div>
       <main>
         <div className="bg-text">spoilralert</div>
         <section>
-          <Placeholder />
-          {/* <div className="logo-search__container">
+          {/* <Placeholder /> */}
+          <div className="logo-search__container">
             <Image
               src={Logo}
               width="200"
@@ -108,7 +108,7 @@ export default function Home() {
                 addMovieToStrapi={addMovieToStrapi}
               />
             </div>
-          </div> */}
+          </div>
         </section>
 
         <section>
@@ -120,9 +120,9 @@ export default function Home() {
               <h3>-Climb our spoilr hierarchy</h3>
               {/* <h3>-discuss movies with other peerse</h3> */}
             </div>
-            {/* <button>
+            <button>
               <Link href="/requests">View Requested Spoilrs</Link>
-            </button> */}
+            </button>
           </div>
         </section>
 
