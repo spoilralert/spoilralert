@@ -10,7 +10,7 @@ import Search from "../components/Search";
 import SearchResults from "../components/SearchResults";
 import Link from "next/link";
 import debounce from "lodash.debounce";
-import Placeholder from "../components/placeholder";
+import Placeholder from "../components/Placeholder";
 import { SearchMovies } from "../lib/movies";
 import { useState } from "react";
 import { SearchMovie } from "../lib/movieDB";
